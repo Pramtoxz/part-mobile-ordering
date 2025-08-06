@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    // 1. MENAMBAHKAN NAMESPACE (Memperbaiki error utama)
+    // 1. MENAMBAHKAN NAMESPACE
     namespace 'com.ma.pmo.eavlibrary'
 
     // 2. MENYAMAKAN VERSI SDK DENGAN MODUL APP
@@ -13,13 +13,15 @@ android {
 
     defaultConfig {
         minSdkVersion 21 // Kita naikkan sedikit agar konsisten
-        targetSdkVersion 34
     }
 
     // Menambahkan ini agar konsisten dengan modul app
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 

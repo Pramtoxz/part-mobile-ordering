@@ -8,12 +8,12 @@
     android:background="@color/white">
 
     <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+        android:id="@+id/mainToolbar"/>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/appbar_layout_activity"
         android:layout_width="match_parent"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/mainToolbar"
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout

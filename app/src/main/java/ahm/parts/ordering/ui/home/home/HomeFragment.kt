@@ -6,6 +6,7 @@ import ahm.parts.ordering.data.constant.Constants
 import ahm.parts.ordering.data.model.home.dashboard.CheckoutDashboard
 import ahm.parts.ordering.data.model.home.dashboard.partnumber.kodedealer.AllDealer
 import ahm.parts.ordering.data.room.user.User
+import ahm.parts.ordering.databinding.FragmentHomeBinding // LANGKAH 1: Impor kelas Binding
 import ahm.parts.ordering.helper.*
 import ahm.parts.ordering.helper.dialog.DialogHelper
 import ahm.parts.ordering.ui.base.BaseFragment
@@ -32,25 +33,30 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_home.*
+// HAPUS: import kotlinx.android.synthetic.main.fragment_home.* // LANGKAH 2: Impor sintetik sudah dihapus
 import java.lang.Exception
+import ahm.parts.ordering.ui.home.home.ordersugestion.dealer.KodeDealerOrderSuggestionActivity
+import com.wajahatkarim3.easyvalidation.core.view_ktx.validator
+import com.whiteelephant.monthpicker.WheelView
 
 class HomeFragment : BaseFragment<HomeViewModel>() {
 
     lateinit var mainActivity : HomeActivity
-
     var monthNow = CalendarUtils.getCurrentDate("MMMM yyyy")
-
     var checkoutDashboard : CheckoutDashboard? = null
-
     var user : User? = null
+
+    // LANGKAH 3: Deklarasikan variabel binding untuk Fragment
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        // LANGKAH 4: Gunakan binding untuk inflate layout
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -58,14 +64,13 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
 
         initUI()
         initListener()
-
         observeData()
     }
 
     fun initUI() {
         mainActivity.roleFiturMenu()
 
-        tvMonthNow text monthNow
+        binding.tvMonthNow.text = monthNow
 
         openPage(SalesmanFragment().newInstance())
 
@@ -74,10 +79,9 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
             try {
                 when(user!!.id_role){
                     Constants.ROLE.DEALER -> {
-                        btnSalesman.hide()
-
-                        btnDealer.setBackgroundResource(R.drawable.bg_red_category_enable_home)
-                        tvDealer.setTextColor(resources.getColor(R.color.white))
+                        binding.btnSalesman.hide()
+                        binding.btnDealer.setBackgroundResource(R.drawable.bg_red_category_enable_home)
+                        binding.tvDealer.setTextColor(resources.getColor(R.color.white))
 
                         openPage(DealerFragment().newInstance())
                     }
@@ -104,11 +108,11 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                     loadingDialog.dismiss()
                     when(it.status){
                         ApiStatus.SUCCESS -> {
-                            snacked(rootView, it.message[0].toString())
-                            vCheckout.hide()
+                            snacked(binding.root, it.message[0].toString())
+                            binding.vCheckout.hide()
                         }
                         else -> {
-                            snacked(rootView, it)
+                            snacked(binding.root, it)
                         }
                     }
                 }
@@ -117,27 +121,20 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
 
         viewModel.checkoutViewDashboard.observe(viewLifecycleOwner, Observer {
             checkoutDashboard = it
-
-            tvDealerCheckout text checkoutDashboard?.codeDealer + " - " + checkoutDashboard?.dealerName
-
-            vCheckout.show()
+            binding.tvDealerCheckout.text = checkoutDashboard?.codeDealer + " - " + checkoutDashboard?.dealerName
+            binding.vCheckout.show()
         })
     }
 
     private fun dialogCalendar() {
-
-        var monthSelected = tvMonthNow.text.toString()
-
+        var monthSelected = binding.tvMonthNow.text.toString()
         val dialogCalendar = activity!!.initDialog(R.layout.dialog_bottom_calendar_home_wheel,true,Gravity.BOTTOM)
-
         val wheel = dialogCalendar.findViewById<WheelView>(R.id.wheel)
         val btnViewDashboard = dialogCalendar.findViewById<Button>(R.id.btnViewDashboard)!!
         val vTop = dialogCalendar.findViewById<View>(R.id.vTop)!!
-
         vTop.onClick {
             dialogCalendar.dismiss()
         }
-
         val months = ArrayList<String>()
         months.add(getString(R.string.month_januari) + CalendarUtils.thisYear())
         months.add(getString(R.string.month_februari) + CalendarUtils.thisYear())
@@ -159,11 +156,9 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                 monthSelected = item
             }
         }
-
         btnViewDashboard.onClick {
             dialogCalendar.dismiss()
-            activity!!.tvMonthNow text monthSelected
-
+            binding.tvMonthNow.text = monthSelected
             sendBroadcast(monthSelected)
         }
     }
@@ -183,26 +178,25 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
     }
 
     private fun initListener() {
-        btnPartNumber.setOnClickListener(this)
-        btnCampaignPromo.setOnClickListener(this)
-        vDate.setOnClickListener(this)
-        btnSalesman.setOnClickListener(this)
-        btnDealer.setOnClickListener(this)
-        btnOrderSugestion.setOnClickListener(this)
-        ivNotification.setOnClickListener(this)
-        btnCheckOut.setOnClickListener(this)
+        binding.btnPartNumber.setOnClickListener { onClick(it) }
+        binding.btnCampaignPromo.setOnClickListener { onClick(it) }
+        binding.vDate.setOnClickListener { onClick(it) }
+        binding.btnSalesman.setOnClickListener { onClick(it) }
+        binding.btnDealer.setOnClickListener { onClick(it) }
+        binding.btnOrderSugestion.setOnClickListener { onClick(it) }
+        binding.ivNotification.setOnClickListener { onClick(it) }
+        binding.btnCheckOut.setOnClickListener { onClick(it) }
     }
 
     private fun dialogCheckout(){
         activity!!.bottomSheet(R.layout.dialog_bottom_visit_add_confirmation) {
             val btnNo = it.findViewById<Button>(R.id.btnNo)!!
             val btnCheckout = it.findViewById<Button>(R.id.btnCheckout)!!
-
             val tvDialogTitle = it.findViewById<TextView>(R.id.tvDialogTitle)!!
             val tvDialogMessage = it.findViewById<TextView>(R.id.tvDialogMessage)!!
 
-            tvDialogTitle text getString(R.string.lbl_dialog_title_checkout)
-            tvDialogMessage text getString(R.string.lbl_dialog_message_checkout)
+            tvDialogTitle.text = getString(R.string.lbl_dialog_title_checkout)
+            tvDialogMessage.text = getString(R.string.lbl_dialog_message_checkout)
 
             btnNo.onClick { this.dismiss() }
 
@@ -210,13 +204,12 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                 this.dismiss()
                 viewModel.hitCheckoutDashboard(checkoutDashboard!!.codeVisit)
             }
-
         }
     }
 
-    override fun onClick(v: View?) {
+    fun onClick(v: View) {
         when (v) {
-            btnPartNumber -> {
+            binding.btnPartNumber -> {
                 when(user!!.id_role){
                     Constants.ROLE.NONCHANNEL -> {
                         goTo<SearchPartActivity> {
@@ -235,10 +228,10 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                     }
                 }
             }
-            btnCampaignPromo -> {
+            binding.btnCampaignPromo -> {
                 goTo<CampaignPromoActivity> { }
             }
-            btnOrderSugestion -> {
+            binding.btnOrderSugestion -> {
                 when(user!!.id_role){
                     Constants.ROLE.DEALER -> {
                         goTo<SuggestOrderActivity> {
@@ -250,42 +243,41 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                         goTo<KodeDealerOrderSuggestionActivity> { }
                     }
                 }
-
             }
-            ivNotification -> {
+            binding.ivNotification -> {
                 goTo<NotificationActivity> { }
             }
-            vDate -> {
+            binding.vDate -> {
                 dialogCalendar()
             }
-            btnSalesman -> {
-                btnSalesman.setBackgroundResource(R.drawable.bg_red_category_enable_home)
-                btnDealer.setBackgroundResource(R.drawable.bg_grey_category_disable_home)
-
-                tvSalesman.setTextColor(resources.getColor(R.color.white))
-                tvDealer.setTextColor(resources.getColor(R.color.txt_gray))
-
+            binding.btnSalesman -> {
+                binding.btnSalesman.setBackgroundResource(R.drawable.bg_red_category_enable_home)
+                binding.btnDealer.setBackgroundResource(R.drawable.bg_grey_category_disable_home)
+                binding.tvSalesman.setTextColor(resources.getColor(R.color.white))
+                binding.tvDealer.setTextColor(resources.getColor(R.color.txt_gray))
                 openPage(SalesmanFragment().newInstance())
             }
-            btnDealer -> {
-                btnDealer.setBackgroundResource(R.drawable.bg_red_category_enable_home)
-                btnSalesman.setBackgroundResource(R.drawable.bg_grey_category_disable_home)
-
-                tvSalesman.setTextColor(resources.getColor(R.color.txt_gray))
-                tvDealer.setTextColor(resources.getColor(R.color.white))
-
+            binding.btnDealer -> {
+                binding.btnDealer.setBackgroundResource(R.drawable.bg_red_category_enable_home)
+                binding.btnSalesman.setBackgroundResource(R.drawable.bg_grey_category_disable_home)
+                binding.tvSalesman.setTextColor(resources.getColor(R.color.txt_gray))
+                binding.tvDealer.setTextColor(resources.getColor(R.color.white))
                 openPage(DealerFragment().newInstance())
             }
-            btnCheckOut -> {
+            binding.btnCheckOut -> {
                 dialogCheckout()
             }
         }
-        super.onClick(v)
     }
 
     private fun openPage(fragment: Fragment) {
-        activity!!.supportFragmentManager.beginTransaction().replace(R.id.flContent, fragment)
+        activity!!.supportFragmentManager.beginTransaction().replace(binding.flContent.id, fragment)
             .commit()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

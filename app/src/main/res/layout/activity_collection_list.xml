@@ -44,16 +44,7 @@
 
 
             <com.loopeer.shadow.ShadowView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16"
-                android:layout_marginTop="@dimen/margin_6"
-                android:layout_marginEnd="@dimen/margin_16"
-                android:layout_marginBottom="@dimen/margin_6"
-                app:backgroundColor="@color/white"
-                app:cornerRadius="@dimen/margin_20"
-                app:shadowMargin="@dimen/margin_4"
-                app:shadowRadius="@dimen/margin_15">
+             >
 
 
                 <LinearLayout
