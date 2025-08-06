@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdItemCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_6"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="@dimen/margin_20"
+        app:cardElevation="@dimen/margin_2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_cart_number">
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_13"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
+                app:fontFamily="@font/opensans_semibold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:layout_marginRight="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:text="PIUT -"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+                    <TextView
+                        android:id="@+id/tvKodeCollect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="######"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:text="Tanggal Awal - Akhir"
+                    android:textColor="@color/txt_gray_category"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_collection_quantity"
+                    android:textColor="@color/txt_gray_ongoing"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_collection_piutang"
+                    android:textColor="@color/txt_gray_ongoing"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvJumlahBarang"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Item"
+                    android:textColor="@color/txt_gray_ongoing"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+                <TextView
+                    android:id="@+id/tvJumlahPcs"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:text="##"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:text="Pcs"
+                    android:textColor="@color/txt_gray_category"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+
+                <TextView
+                    android:id="@+id/tvTotalPiutang"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="##############"
+                    android:textColor="@color/red_amount_order"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="560dp"
+            android:src="@drawable/ic_checklist_btn_dis"
+            android:visibility="gone"/>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

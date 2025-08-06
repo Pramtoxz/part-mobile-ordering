@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_fill_bottom_dialog"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_gray" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Harga Produk"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_medium"
+            app:fontFamily="@font/opensans_semibold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/produk_lbl_total_unit"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <TextView
+                android:id="@+id/tvAmountTotalUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="end"
+                android:text="@string/produk_lbl_total_unit"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_default" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/produk_lbl_total_accessories"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <TextView
+                android:id="@+id/tvAmountAccessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="end"
+                android:text="@string/produk_lbl_total_unit"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_default" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/produk_lbl_total_unit"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <TextView
+                android:id="@+id/tvAmountApparel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="end"
+                android:text="@string/produk_lbl_total_perlengkapan"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_default" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/produk_lbl_grand_total"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <TextView
+                android:id="@+id/tvAmountGrandTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="end"
+                android:text="@string/produk_lbl_total_unit"
+                android:textColor="@color/red_crimson"
+                android:textSize="@dimen/txt_default" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

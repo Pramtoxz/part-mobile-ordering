@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:layout_marginEnd="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_follow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Follow Up 3 . Bertemu"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_followup_target" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:fontFamily="@font/opensans"
+                android:text="29 Apr 2019"
+                android:textColor="@color/txt_gray"
+                android:textSize="@dimen/txt_small" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_followup_done" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:fontFamily="@font/opensans"
+                android:text="31 Apr 2019"
+                android:textColor="@color/txt_gray"
+                android:textSize="@dimen/txt_small" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:fontFamily="@font/opensans_regular"
+            android:letterSpacing="0"
+            android:lineSpacingExtra="20px"
+            android:text="Pak Anang meminta bertemu di hari senin tanggal 29 April 2019 di Kantor"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_small" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

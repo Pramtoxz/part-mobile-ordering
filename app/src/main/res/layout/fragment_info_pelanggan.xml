@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlContent"
+    android:background="@color/white_dark"
+    tools:context=".ui.newprospek.step.infopelanggan.InfoPelangganFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInfoPelanggan_pilihData"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_margin="@dimen/margin_20"
+                android:background="@drawable/bg_white_round_100"
+                android:drawableEnd="@drawable/ic_add_item"
+                android:fontFamily="@font/opensans_regular"
+                android:paddingStart="@dimen/margin_20"
+                android:paddingEnd="@dimen/margin_20"
+                android:text="@string/hint_pilih_dari_data_pelanggan"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_fill_round_top_white"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_20">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/form_login_radius_100">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivCustomerPhoto"
+                        android:layout_width="@dimen/form_login_radius_100"
+                        android:layout_height="@dimen/form_login_radius_100"
+                        android:layout_marginStart="@dimen/radius_card_small"
+                        android:scaleType="centerCrop"
+                        android:src="@color/gray80"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_corner_radius="@dimen/form_login_radius_100" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_photo_camera"
+                        app:layout_constraintBottom_toBottomOf="@id/ivCustomerPhoto"
+                        app:layout_constraintEnd_toEndOf="@id/ivCustomerPhoto"
+                        app:layout_constraintStart_toStartOf="@id/ivCustomerPhoto"
+                        app:layout_constraintTop_toTopOf="@id/ivCustomerPhoto" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCustomerPhoto"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@string/foto_pelanggan"
+                            android:textColor="@color/txt_black"
+                            app:layout_constraintStart_toEndOf="@id/ivCustomerPhoto" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@string/foto_pelanggan_di_lokasi"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/txt_small"
+                            app:layout_constraintStart_toEndOf="@id/ivCustomerPhoto" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerKTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_NIK"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_NamaProspek"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_telp"
+                        android:inputType="phone"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etCustomerDateProspect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_filed_date"
+                            android:drawablePadding="@dimen/margin_medium"
+                            android:focusable="false"
+                            android:fontFamily="@font/opensans_regular"
+                            android:hint="@string/hint_tanggalProspek"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:paddingStart="@dimen/radius_card_small"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_gray"
+                            android:textSize="@dimen/txt_small" />
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etCustomerAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_field_loc"
+                            android:drawablePadding="@dimen/margin_medium"
+                            android:fontFamily="@font/opensans_regular"
+                            android:hint="@string/hint_alamat"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/radius_card_small"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_gray"
+                            android:textSize="@dimen/txt_small"
+                            tools:text="android:1234567890- @android:1234567890- @android:1234567890- @android:1234567890- @android:1234567890- " />
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/optional"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_smallest" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_prospect_pekerjaan"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerAddressOffice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_alamat_kantor"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/optional"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_smallest" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerPhoneOffice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_notelp_kantor"
+                        android:inputType="phone"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/optional"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_smallest" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerInfoPelanggan_kodeTipeUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/radius_card_small"
+                        android:background="@drawable/bg_dropdown_custom"
+                        tools:listitem="@layout/item_spinner_custom" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etCustomerDataUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:fontFamily="@font/opensans_regular"
+                            android:hint="@string/hint_customer_tipe_unit"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:paddingStart="@dimen/radius_card_small"
+                            android:paddingEnd="@dimen/radius_card_small"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_gray"
+                            android:textSize="@dimen/txt_small" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spCustomerFollowUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/radius_card_small"
+                        android:background="@drawable/bg_dropdown_custom"
+                        tools:listitem="@layout/item_spinner_custom" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etCustomerFollowUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:fontFamily="@font/opensans_regular"
+                            android:hint="Follow Up"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:paddingStart="@dimen/radius_card_small"
+                            android:paddingEnd="@dimen/radius_card_small"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_gray"
+                            android:textSize="@dimen/txt_small" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/optional"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_smallest" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCustomerPreferenceTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_pref_uji_perjalanan"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/radius_card_small"
+                        android:paddingEnd="@dimen/radius_card_small"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/txt_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/view1"
+        android:background="@color/white_dark" />
+
+    <LinearLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStep1_saveProspek"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_50"
+            android:layout_margin="@dimen/margin_20"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_btn_black_round"
+            android:text="Save Prospek"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_50"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_round_disable_gray"
+            android:text="Lanjut"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

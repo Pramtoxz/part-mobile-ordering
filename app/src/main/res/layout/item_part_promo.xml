@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/margin_3"
+        app:cardCornerRadius="@dimen/margin_20"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNamePart"
+                android:text="CAM1 • HONDA CABLE FANTASY"
+                android:layout_marginTop="@dimen/margin_18"
+                android:textColor="@color/txt_black_category"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvPartNumber"
+                android:text="06381KW6P01 • CABLE 1"
+                android:layout_marginTop="@dimen/margin_2"
+                android:textColor="@color/txt_gray_category"
+                app:fontFamily="@font/opensans"
+                android:textSize="@dimen/font_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvHet"
+                android:text="Rp. 55.000"
+                android:layout_marginTop="@dimen/margin_4"
+                android:textColor="@color/red_nominal"
+                app:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:text="10%"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvBeginDate"
+                    android:text="Juni 30, 2019"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:text="Juli 31, 2019"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Discount"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@string/lbl_campaign_promo_begin_effdate"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@string/lbl_campaign_promo_end_effdate"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNotePart"
+                android:layout_marginBottom="@dimen/margin_24"
+                android:text="*Khusus Pelanggan Guru"
+                android:layout_marginTop="@dimen/margin_12"
+                android:textColor="@color/txt_gray"
+                app:fontFamily="@font/opensans_italic"
+                android:textSize="@dimen/font_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vNotifPromo"
+        android:foreground="?selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_9"
+        android:layout_marginBottom="@dimen/margin_9"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/margin_3"
+        app:cardCornerRadius="@dimen/margin_20"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitleNotifPromo"
+                android:text="NOTIFIKASI • NEW PROMO"
+                android:layout_marginTop="@dimen/margin_18"
+                android:textColor="@color/txt_gray_"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNamePartPromo"
+                android:text="CAM1 • HONDA CABLE FANTASY"
+                android:textColor="@color/txt_black_category"
+                android:layout_marginTop="@dimen/margin_8"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvPartNumberPromo"
+                android:text="06381KW6P01 • CABLE 1"
+                android:layout_marginTop="@dimen/margin_4"
+                android:textColor="@color/txt_gray_category"
+                app:fontFamily="@font/opensans"
+                android:textSize="@dimen/font_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvHetPromo"
+                android:text="Rp. 55.000"
+                android:layout_marginTop="@dimen/margin_6"
+                android:textColor="@color/red_nominal"
+                app:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDiscountPromo"
+                    android:text="10%"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvBeginDatePromo"
+                    android:text="Juni 30, 2019"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvEndDatePromo"
+                    android:text="Juli 31, 2019"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Discount"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@string/lbl_campaign_promo_begin_effdate"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@string/lbl_campaign_promo_end_effdate"
+                    android:textColor="@color/txt_gray"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNotePartPromo"
+                android:layout_marginBottom="@dimen/margin_24"
+                android:text="*Khusus Pelanggan Guru"
+                android:layout_marginTop="@dimen/margin_12"
+                android:textColor="@color/txt_gray"
+                app:fontFamily="@font/opensans_italic"
+                android:textSize="@dimen/font_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vNotifKredit"
+        android:foreground="?selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_9"
+        android:layout_marginBottom="@dimen/margin_9"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/margin_3"
+        app:cardCornerRadius="@dimen/margin_20"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitleNotifKredit"
+                android:text="NOTIFICATION • KREDIT LIMIT"
+                android:layout_marginTop="@dimen/margin_18"
+                android:textColor="@color/txt_gray_"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDealerKreditLimit"
+                android:text="772190 • Arjuna Sari Motor"
+                android:textColor="@color/txt_black_category"
+                android:layout_marginTop="@dimen/margin_8"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDateKreditLimit"
+                    android:text="29 Oktober 2019"
+                    android:textColor="@color/red_amount_order"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:id="@+id/tvAmountKreditLimit"
+                    android:text="Rp 6.000.000"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/lbl_tanggal_jatuh_ntempo"
+                    android:textColor="@color/txt_gray_"
+                    app:fontFamily="@font/opensans_regular"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:text="@string/lbl_amount_jatuh_tempo_nminimum"
+                    android:textColor="@color/txt_gray_"
+                    app:fontFamily="@font/opensans_regular"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vNotifInformation"
+        android:foreground="?selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_9"
+        android:layout_marginBottom="@dimen/margin_9"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/margin_3"
+        app:cardCornerRadius="@dimen/margin_20"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="NOTIFICATION • INFORMATION"
+                android:layout_marginTop="@dimen/margin_18"
+                android:textColor="@color/txt_gray_"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTitleNotifInformation"
+                android:text="Promo Details"
+                android:textColor="@color/txt_black_category"
+                android:layout_marginTop="@dimen/margin_8"
+                app:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/font_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDescriptionInformation"
+                    android:text="Lorem Ipsum"
+                    android:textSize="@dimen/font_12"
+                    android:layout_width="0dp"
+                    android:textColor="@color/txt_black_category"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:layout_marginRight="@dimen/margin_4"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_2"
+            android:textColorHint="@color/grey_hint">
+
+            <EditText
+                android:id="@+id/etKodeDealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:hint="@string/hint_kode_dealer"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="@dimen/margin_10"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vDivKodeDealer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="@dimen/margin_7"
+            android:background="@color/grey_divider_1" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_2"
+            android:textColorHint="@color/grey_hint">
+
+            <EditText
+                android:id="@+id/etNamaKompetitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_nama_kompetitor"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="@dimen/margin_10"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vDivNamaKompetitor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="@dimen/margin_7"
+            android:background="@color/grey_divider_1" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_2"
+            android:textColorHint="@color/grey_hint">
+
+            <EditText
+                android:id="@+id/etJudulAktivitasKompetitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_judul_aktivitas_kompetitor"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="@dimen/margin_10"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vDivJudulAktivitasKompetitor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="@dimen/margin_7"
+            android:background="@color/grey_divider_1" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_2"
+            android:textColorHint="@color/grey_hint">
+
+            <EditText
+                android:id="@+id/etProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_produk"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="@dimen/margin_10"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vDivProduk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="@dimen/margin_7"
+            android:background="@color/grey_divider_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_2"
+                    android:textColorHint="@color/grey_hint">
+
+                    <EditText
+                        android:id="@+id/etBeginEffDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:focusable="false"
+                        android:drawableRight="@drawable/ic_calendar_form"
+                        android:hint="@string/hint_begin_effdate"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:paddingTop="@dimen/margin_10"
+                        android:textSize="@dimen/font_15"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:layout_marginTop="@dimen/margin_7"
+                    android:background="@color/grey_divider_1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_2"
+                    android:textColorHint="@color/grey_hint">
+
+                    <EditText
+                        android:id="@+id/etLastEffDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:background="@color/transparent"
+                        android:drawableRight="@drawable/ic_calendar_form"
+                        android:hint="@string/hint_last_effdate"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:paddingTop="@dimen/margin_10"
+                        android:textSize="@dimen/font_15"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:layout_marginTop="@dimen/margin_7"
+                    android:background="@color/grey_divider_1" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnUploadCampaignImage"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bg_fill_competitor_upload_campaign_promo"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginBottom="@dimen/margin_14"
+                android:layout_marginLeft="@dimen/margin_22"
+                android:layout_marginRight="@dimen/margin_22"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvUploadImageCampaign"
+                    android:text="@string/lbl_upload_campaign_image"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_upload"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_2"
+            android:textColorHint="@color/grey_hint">
+
+            <EditText
+                android:id="@+id/etKeteranganPromo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_keterangan_promo"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingTop="@dimen/margin_10"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vDivKeteranganPromo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="@dimen/margin_7"
+            android:background="@color/grey_divider_1" />
+
+        <Button
+            android:id="@+id/btnAddCompetitor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_add_competitor"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+        <include layout="@layout/content_view_state"/>
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

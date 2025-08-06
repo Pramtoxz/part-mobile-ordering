@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/bg_fill_circle_indicator_red" />
+
+        <ahm.parts.ordering.ui.widget.line.DottedLine
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_medium"
+            />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:src="@drawable/bg_fill_circle_indicator_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCurrentFunnel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_default"
+            android:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/txt_black"
+            android:text="SPK"/>
+
+        <TextView
+            android:id="@+id/tvToFunnel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_smallest"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="@color/txt_gray"
+            android:text="SPK"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

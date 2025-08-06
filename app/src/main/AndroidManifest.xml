@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ahm.parts.ordering">
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name=".Core"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_pmo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_pmo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m"
+        tools:replace="android:icon">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <service
+            android:name=".receiver.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name=".data.provider.GenericFileProvider"
+            android:authorities="${applicationId}.ui.base.NoViewModelActivity"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".ui.home.home.partnumber.searchpart.SearchPartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+        <activity android:name="ahm.parts.ordering.ui.widget.activity.prospect.customer.ProspectCustomerActivity" />
+        <activity android:name="ahm.parts.ordering.ui.widget.activity.prospect.detail.DetailProspectActivity" />
+        <activity android:name="ahm.parts.ordering.ui.widget.activity.sales.ActivitySalesActivity" />
+        <activity android:name="ahm.parts.ordering.ui.widget.activity.spk.SPKActivity" />
+        <activity android:name="ahm.parts.ordering.ui.widget.activity.prospect.ProspectActivity" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="ahm.parts.ordering.ui.auth.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.home.home.ordersugestion.kelompok_barang.KelompokBarangSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.tipemotor.TipeMotorSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.favorite.FavoriteActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.campaignpromo.CampaignPromoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.catalogue.detail_file.file.CatalogueFileActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.catalogue.part_catalogue.PartCatalogueActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.tipemotor.TipeMotorSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.kelompokbarang.KelompokBarangSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.SearchPartActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.cekstockpartfilter.CheckStockPartActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.detail.PartNumberDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.partnumbersearch.PartNumberFilterActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.catalogue.detail_file.file_list.CatalogueFileListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.catalogue.detail_file.file_parent.CatalogueFileParentActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.campaignpromo.fragment.brosur.BrosureDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.campaignpromo.fragment.part.PartPromoDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.CheckStockSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.cekstockpartfilter.CheckStockFilterActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.order.tracking.TrackingOrderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.order.tracking.detailitem.TrackingOrderDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.home.partnumber.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.list.CompetitorActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.SalesmanVisitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.visit.AddNewVisitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.EfektivitasActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.dealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+
+        <activity android:name=".ui.home.home.partnumber.cart.CartActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.home.partnumber.cart.skemapembelian.filter.FilterListActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.partnumber.historyorder.list.HistoryOrderActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.home.partnumber.cart.skemapembelian.SkemaPembelianActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.ordersugestion.skemapembelian.SkemaPembelianActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.partnumber.cart.suggestorder.SuggestOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.detail.single.CompetitorDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.add.single.CompetitorAddActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.partnumber.cart.summary.SummaryActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.partnumber.cart.summary.result.SummaryResultActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.ordersugestion.SuggestOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.cart.CartActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.ordersugestion.partsearch.PartNumberSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.visit.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.visit.rencanavisit.RencanaVisitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.visit.salesvisit.SalesVisitActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.order.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.order.tracking.detailpengiriman.TrackingOrderPengirimanDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity android:name=".ui.home.dealer.collection.CollectionActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.collection.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.collection.list.CollectionActivityList"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.collection.add.CollectionAddMultipleActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.collection.CollectionNotification"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.notification.NotificationActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.notification.detail.NotificationKreditLimitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity android:name=".ui.home.dealer.kreditlimit.KreditLimitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.kreditlimit.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.kreditlimit.detail.kreditlimit.KreditLimitDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.kreditlimit.detail.jatuhtempo.KreditJatuhTempoDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.dealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.koordinatorsalesman.KoordinatorSalesmanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.salesman.SalesmanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+<!--        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.planactual.PlanActualActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            tools:ignore="LockedOrientationActivity"/>-->
+
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.salesman.SalesmanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.koordinatorsalesman.KoordinatorSalesmanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+<!--        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.planactual.PlanActualActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            tools:ignore="LockedOrientationActivity" />-->
+
+<!--        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.salesman.detail.PlanActualEfektivitasSalesmanDetailActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            tools:ignore="LockedOrientationActivity"/>-->
+
+<!--        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.planactual.koordinator.detail.PlanActualEfektivitasCoordinatorDetailActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            tools:ignore="LockedOrientationActivity"/>-->
+
+        <activity android:name=".ui.previewimage.PreviewImageActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.notification.detail.NotificationInformationActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.auth.forgotpassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.profile.changepassword.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.home.dashboard.dealer.kodedealer.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.kreditlimit.detail.kreditlimit.KreditLimitListDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.kreditlimit.detail.jatuhtempo.KreditJatuhTempoListDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.add.multiple.CompetitorAddMultipleActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.competitor.detail.slider.CompetitorDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.RealisasiVisitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.planactual.salesman.PlanActualEfektivitasSalesmanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.efektivitas.planactual.koordinator.PlanActualEfektivitasCoordinatorActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.planactual.salesman.PlanActualRealisasiSalesmanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name=".ui.home.dealer.salesmanvisit.realisasivisit.planactual.koordinator.PlanActualRealisasiKoordinatorActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.addnewdealer.AddNewDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.manager.PlanActualRealisasiCoordinatorManagerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.manager.PlanActualRealisasiSalesmanManagerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.manager.detail.PlanActualManagerDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.detail.PlanActualDetailRealisasiVisitTabActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.detail.PlanActualEfektivitasDetailTabActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.manager.PlanActualEfektivitasCoordinatorManagerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.manager.PlanActualEfektivitasSalesmanManagerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.manager.detail.PlanActualManagerDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity android:name="ahm.parts.ordering.ui.home.dealer.kreditlimit.kodedealer.single.KodeDealerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <!--        <meta-data-->
+<!--            android:name="com.google.android.geo.API_KEY"-->
+<!--            android:value="@string/api_google_2" />-->
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDxoPmCfJyn1Q0DHhSl_PI2R0G5Vap2boY"/>
+
+        <service
+            android:name=".helper.AddressService"
+            android:exported="false" />
+    </application>
+
+</manifest>

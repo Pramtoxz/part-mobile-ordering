@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_6"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_6"
+        app:cardCornerRadius="@dimen/margin_20"
+        app:cardElevation="@dimen/margin_3">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPartNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="06381KW6P01"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:id="@+id/tvPartDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CON ROD • KIT"
+                        android:textColor="@color/txt_gray_category"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:src="@drawable/ic_discrount_badge" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvItemGroup"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_1"
+                android:background="@drawable/bg_favorite_type"
+                android:paddingLeft="@dimen/margin_9"
+                app:fontFamily="@font/opensans_regular"
+                android:paddingRight="@dimen/margin_9"
+                android:paddingBottom="@dimen/margin_3"
+                android:text="TIRE"
+                android:textColor="@color/txt_gray_category"
+                android:textSize="@dimen/font_10" />
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvHet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="Rp. 55.000"
+                        android:textColor="@color/red_nominal"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_bold" />
+
+                    <TextView
+                        android:id="@+id/tvAvailabePcs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_10"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnLike"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginBottom="@dimen/margin_3"
+                    android:layout_marginRight="@dimen/margin_15"
+                    app:cardElevation="@dimen/margin_3"
+                    android:foreground="?selectableItemBackground"
+                    app:cardCornerRadius="@dimen/margin_14"
+                    android:layout_width="@dimen/margin_38"
+                    android:layout_height="@dimen/margin_30">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivLike"
+                            android:src="@drawable/ic_like_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lChart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:background="@drawable/bg_fill_add_green_rounded"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_15"
+                            android:paddingRight="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_2"
+                            android:text="@string/btn_add_plus"
+                            android:textColor="@color/white"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lSelectedChart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:background="@drawable/bg_fill_add_green_rounded_disable"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_20"
+                            android:paddingRight="@dimen/margin_20"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/vStockEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:background="@drawable/bg_fill_add_green_rounded_disable"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_15"
+                            android:paddingRight="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_2"
+                            android:text="@string/lbl_habis"
+                            android:textColor="@color/white"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <!--            <LinearLayout-->
+            <!--                android:layout_marginBottom="@dimen/margin_20"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_height="wrap_content">-->
+
+            <!--                -->
+
+
+            <!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

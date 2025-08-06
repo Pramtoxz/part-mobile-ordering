@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_fill_bottom_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_gray" />
+
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:gravity="center"
+            android:text="@string/lbl_title_bottom_sales_checkin_berhasil"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_medium"
+            app:fontFamily="@font/opensans_semibold" />
+
+
+        <TextView
+            android:id="@+id/tvDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_18"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/margin_3"
+            android:text="@string/lbl_content_bottom_sales_checkin_berhasil"
+            android:textColor="@color/txt_black_category"
+            android:textSize="@dimen/font_14"
+            app:fontFamily="@font/opensans_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_35"
+                android:layout_marginRight="@dimen/margin_12"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_weight="1"
+                android:background="@drawable/bg_fill_red_no_order"
+                android:text="@string/btn_tidak"
+                android:textAllCaps="false"
+                android:textColor="@color/red_crimson"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_35"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_green_search_parts"
+                android:text="Ya, Checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

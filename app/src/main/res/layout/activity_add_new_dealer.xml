@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/fMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintDimensionRatio="H,16:12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </fragment>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/centerMarker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_marker_dealer" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_pin_map"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/ivBlock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:background="@drawable/bg_fill_bottom_dialog"
+            android:layout_marginTop="@dimen/_minus15sdp"
+            android:layout_width="match_parent"
+            android:elevation="100dp"
+            android:layout_height="match_parent">
+
+
+      <!--  <com.loopeer.shadow.ShadowView
+            android:layout_width="match_parent"
+            app:cornerRadiusTL="20dp"
+            app:backgroundColor="@color/white"
+            app:cornerRadiusTR="20dp"
+            app:shadowMarginTop="@dimen/margin_extra_small"
+            app:shadowRadius="@dimen/margin_large"
+            android:layout_height="wrap_content">-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_20"
+                android:paddingEnd="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:text="@string/lbl_lengkapi_form_untuk_add_new_dealer"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_italic" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_nama_dealer"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/txt_small"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <EditText
+                        android:id="@+id/etNameDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_selector_form_visit"
+                        android:drawablePadding="12dp"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:paddingRight="22dp"
+                        android:textColor="@color/txt_black"
+                        app:fontFamily="@font/opensans_regular"
+                        android:textColorHint="@color/txt_hint_login"
+                        android:textSize="@dimen/txt_default" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Longitude Latitude"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/txt_small"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <EditText
+                        android:id="@+id/etLatLong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_selector_form_visit"
+                        android:drawablePadding="12dp"
+                        android:gravity="center_vertical"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:paddingRight="22dp"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_hint_login"
+                        android:textSize="@dimen/txt_default" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_alamat"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/txt_small"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_selector_form_visit"
+                        android:drawablePadding="12dp"
+                        android:text=""
+                        android:gravity="top"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:minLines="3"
+                        android:paddingLeft="@dimen/margin_16"
+                        app:fontFamily="@font/opensans_regular"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_22"
+                        android:textColor="@color/txt_black"
+                        android:textColorHint="@color/txt_hint_login"
+                        android:textSize="@dimen/txt_default" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_upload_image"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/txt_small"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvFoto"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:layout_constraintDimensionRatio="H,16:6"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:background="@drawable/bg_selector_form_visit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/ivPhoto"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                                <!--   <View
+                                       android:background="@color/black_opacity"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"/>-->
+                                <ImageView
+                                    android:id="@+id/ivPhotoAdd"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_photo_grey"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/btnChangePhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_margin="@dimen/default_padding"
+                                android:background="@drawable/bg_fill_btn_rounded_transparent"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/default_padding"
+                                android:paddingTop="@dimen/margin_small"
+                                android:paddingRight="@dimen/default_padding"
+                                android:paddingBottom="@dimen/margin_small"
+                                android:text="@string/btn_retake_photo"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_medium"
+                                app:fontFamily="@font/opensans_regular" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_telepon"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingRight="22dp"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_hint_login"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_keterangan"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawablePadding="12dp"
+                            android:gravity="top"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:minLines="3"
+                            android:paddingLeft="@dimen/margin_16"
+                            app:fontFamily="@font/opensans_regular"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingRight="@dimen/margin_22"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/txt_hint_login"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnAddDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:background="@drawable/bg_btn_green_search_parts"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:text="@string/btn_tambah_dealer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_15" />
+
+                    <include layout="@layout/content_view_state"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+       <!-- </com.loopeer.shadow.ShadowView>-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

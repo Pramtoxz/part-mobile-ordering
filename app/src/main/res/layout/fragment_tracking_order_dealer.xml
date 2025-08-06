@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_crimson"
+    android:orientation="vertical"
+    tools:context=".ui.home.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/lbl_tracking_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15"
+            app:fontFamily="@font/opensans_semibold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_fill_bottom_fragment"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cart_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:text="@string/lbl_silakan_pilih_dealer_terlebih_dulu"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_16"
+            app:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/txt_black_tracking"/>
+
+
+        <TextView
+            android:text="Pilih dealer untuk melakukan \ntracking order"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"
+            app:fontFamily="@font/opensans_regular"
+            android:textColor="@color/txt_black_tracking"/>
+
+
+        <Button
+            android:id="@+id/btnSearchDealer"
+            android:gravity="center"
+            android:background="@drawable/bg_btn_green_search_parts"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/_35sdp"
+            android:paddingRight="@dimen/_35sdp"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_35"
+            android:text="@string/btn_cari_dealer"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:drawablePadding="@dimen/margin_10"
+            android:drawableLeft="@drawable/ic_search"
+            app:fontFamily="@font/opensans_semibold"
+            android:layout_marginBottom="@dimen/margin_20"
+            >
+
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_marginLeft="@dimen/margin_10"-->
+<!--                android:text="@string/btn_cari_dealer"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="@dimen/font_15"-->
+<!--                app:fontFamily="@font/opensans_semibold"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+        </Button>
+
+    </LinearLayout>
+
+
+</LinearLayout>

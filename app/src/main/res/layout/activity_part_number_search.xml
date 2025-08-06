@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lBottom"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/font_14"
+                    android:layout_marginRight="@dimen/margin_20"
+                    app:fontFamily="@font/opensans_italic"
+                    android:text="@string/lbl_search_parts_info_header"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:background="@color/transparent"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etSimilarity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:hint="@string/hint_search_parts_similarity"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivSimilarity"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_40"
+                        android:background="@color/transparent"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etPartNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:hint="@string/hint_search_parts_part_number"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivPartNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_40"
+                        android:background="@color/transparent"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etPartDeskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:hint="@string/hint_search_parts_part_deskripsi"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivPartDeskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlKelompokBarang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_40"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/spKelompokBarang"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:drawableRight="@drawable/ic_arrow_down_red"
+                            android:hint="@string/hint_search_parts_kelompok_barang"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivKelompokBarang"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_40"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/spTypeMotor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:background="@color/transparent"
+                            android:drawableRight="@drawable/ic_arrow_down_red"
+                            android:hint="@string/hint_search_parts_type_motor_part"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivTypeMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_22"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_search_part"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>
+
+    <include layout="@layout/content_view_state"/>
+
+</RelativeLayout>

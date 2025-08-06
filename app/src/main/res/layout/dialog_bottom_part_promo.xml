@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_fill_bottom_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_gray" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lbl_title_promo_details"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_medium"
+                    app:fontFamily="@font/opensans_semibold" />
+
+
+                <TextView
+                    android:id="@+id/tvPromoDesc"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:fontFamily="@font/opensans_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btnClosePromo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginRight="@dimen/margin_22"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_tutup_detail_promo"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>
+
+</LinearLayout>

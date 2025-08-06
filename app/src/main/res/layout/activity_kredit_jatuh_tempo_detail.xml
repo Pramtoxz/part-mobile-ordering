@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/margin_4">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_fill_bottom_fragment"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/lbl_kode_dealer"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:id="@+id/tvKodeDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="772190"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/lbl_nama_dealer"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:id="@+id/tvNameDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="Arjuna Sari Motor"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/lbl_tanggal_status"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="28 Agustus 2019"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/lbl_tanggal_jatuh_tempo"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDateOver"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:text="29 Oktober 2019"
+                        android:textColor="@color/red_amount_order"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_bold" />
+
+                    <ImageView
+                        android:id="@+id/ivWarning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_warning" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/lbl_amount_jatuh_tempo_minimum"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_semibold" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:text="Rp 6.000.000"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_semibold" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

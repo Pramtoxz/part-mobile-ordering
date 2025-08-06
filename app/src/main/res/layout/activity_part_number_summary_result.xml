@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent" />
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@drawable/bg_fill_bottom_fragment_white"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/rootContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_80"
+                        android:src="@drawable/ic_cart_response" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_25"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:gravity="center"
+                        android:text="Proses Order Sukses!"
+                        android:textColor="@color/txt_black_tracking"
+                        android:textSize="@dimen/font_18"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:gravity="center"
+                        android:text="@string/lbl_nomor_order_anda"
+                        android:textColor="@color/txt_black_tracking"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_ribbon_red_gagal"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_14"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNoOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="PROD772116009"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:layout_marginBottom="@dimen/margin_8"
+                        android:layout_marginStart="@dimen/margin_17"
+                        android:layout_marginEnd="@dimen/margin_17"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_16"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItemPembelian"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Pembelian (2 items)"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvTotalPembelian"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lbl_diskon"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvDiscount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Rp 0"
+                            android:textColor="@color/red_amount_order"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lbl_month_deliver"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvMonthDeliver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include layout="@layout/content_view_state" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:gravity="center"
+            android:text="Apakah Anda ingin melakukan order \nbarang lagi?"
+            android:textColor="@color/txt_black_category"
+            android:textSize="@dimen/font_14"
+            app:fontFamily="@font/opensans_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnNoOrder"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginLeft="@dimen/margin_22"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_13"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_weight="1"
+                android:background="@drawable/bg_fill_red_no_order"
+                android:text="@string/lbl_tidak"
+                android:textAllCaps="false"
+                android:textColor="@color/red_amount_order"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_22"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_green_search_parts"
+                android:text="@string/btn_ya_order_lagi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

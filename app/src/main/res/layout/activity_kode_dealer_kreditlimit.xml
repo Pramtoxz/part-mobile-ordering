@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/red_search"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_search_kelompok_barang"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingTop="@dimen/margin_9"
+                android:paddingBottom="@dimen/margin_9"
+                android:paddingStart="@dimen/margin_mid"
+                android:paddingEnd="@dimen/margin_medium"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:hint="@string/hint_cari_kode_nama_dealer"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray_hint_search"
+                    android:textSize="@dimen/font_14"
+                    android:imeOptions="actionSearch"
+                    app:fontFamily="@font/opensans_semibold"
+                    android:background="@color/transparent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvBatalkan"
+            android:paddingTop="@dimen/margin_6"
+            android:paddingBottom="@dimen/margin_6"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            app:fontFamily="@font/opensans_semibold"
+            android:textSize="@dimen/font_14"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/lbl_batalkan"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/lBottom"
+            android:layout_height="match_parent">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/rootContent"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey_bg"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvHeader"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        android:layout_marginTop="@dimen/margin_11"
+                        android:layout_marginBottom="@dimen/margin_11"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="@string/lbl_dealer_yang_terhubung_dengan_anda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvKodeDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tool:listitem="@layout/item_kode_dealer_efektifitas"
+                        tool:itemCount="3"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/content_view_state"/>
+
+        <LinearLayout
+            android:id="@+id/lBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnApplyDealer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/bg_btn_green_search_parts"
+                android:text="@string/btn_apply_dealer"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

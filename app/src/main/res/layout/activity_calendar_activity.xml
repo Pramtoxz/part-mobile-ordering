@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_dark"
+    >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!--  <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:type="one_day_picker"
+                app:todayLabelColor="@color/colorPrimary"
+                app:selectionColor="@color/colorPrimary"
+                app:selectionLabelColor="@color/white"
+                app:headerColor="@color/white"
+                app:pagesColor="@color/white"
+                app:headerLabelColor="@color/txt_black"
+                app:daysLabelsColor="@color/txt_black"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_mid">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_small"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:textColor="@color/txt_hint_login"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="Daftar Aktivitas"/>
+
+                <TextView
+                    android:id="@+id/tvTotalActivityDay"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textSize="@dimen/txt_small"
+                    android:layout_marginEnd="@dimen/margin_mid"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:textColor="@color/txt_black"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="8 Mei 2019 . 5 Aktivitas"/>
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_container_white"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAktivitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_wallboard_activity" />
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

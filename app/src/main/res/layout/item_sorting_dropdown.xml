@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingTop="@dimen/margin_22"
+        android:paddingBottom="@dimen/margin_22"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_30"
+        android:paddingRight="@dimen/margin_30"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvSorting"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="Part Number A-Z"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_width="0dp"
+            android:textSize="@dimen/font_15"
+            android:layout_weight="1"
+            android:textColor="@color/txt_black_category"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/ivSorting"
+            android:src="@drawable/ic_arrow_chevron_right"
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            app:tint="@color/red_amount_order"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider"
+        android:layout_height="@dimen/divider_1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/margin_large"
+        android:id="@+id/rvSortChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_sorting_order"
+        tools:itemCount="1">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

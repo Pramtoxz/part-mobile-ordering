@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small"
+    android:minWidth="80dp"
+    android:id="@+id/llContent"
+    android:layout_margin="@dimen/margin_small"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kamis"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/txt_hint_login"
+        android:textSize="@dimen/txt_default"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:fontFamily="@font/opensans_bold"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/txt_huge"/>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/fMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/viewBottom">
+
+        </fragment>
+
+
+        <FrameLayout
+            android:id="@+id/viewBottom"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/viewRetry"
+                android:elevation="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_fill_bottom_fragment_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvJarak"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_italic"
+                        android:text="Checkin • jarak 1000 meter dari Bengkel" />
+
+                    <TextView
+                        android:id="@+id/tvDealer"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/txt_black_category"
+                        android:layout_width="match_parent"
+                        android:text="12312 - Brahmana Motor"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:textColor="@color/grey_hint"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:text="Srondol Wetan, Kec Banyumanik"
+                        app:fontFamily="@font/opensans_regular"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/vRetryContent"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_fill_sales_visit_map_position"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:layout_marginBottom="@dimen/margin_15"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/txt_black"
+                                android:layout_width="0dp"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_13"
+                                android:text="Posisi Anda Terlalu jauh dari dealer! \njarak maksimal check-in 300 meter"
+                                app:fontFamily="@font/opensans_italic"/>
+
+                            <ImageView
+                                android:src="@drawable/ic_warning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnCheckin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:background="@drawable/bg_btn_green_search_parts"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:text="@string/btn_coba_lagi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <include layout="@layout/content_view_state"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

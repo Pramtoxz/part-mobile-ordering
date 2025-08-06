@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootViewErrorState"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_20">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lAnimation"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:padding="@dimen/margin_5"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="search_empty.json"
+            app:lottie_loop="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvErrorState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/_minus21sdp"
+        android:layout_marginRight="@dimen/margin_20"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/margin_2"
+        android:text="@string/lbl_empty_state"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/font_14"
+        app:fontFamily="@font/opensans_semibold" />
+
+
+    <Button
+        android:id="@+id/btnRefreshError"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_48"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_red_category_enable_home"
+        android:paddingLeft="@dimen/margin_35"
+        android:paddingRight="@dimen/margin_35"
+        android:text="@string/btn_ulangi"
+        android:textAllCaps="false"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/font_16"
+        app:fontFamily="@font/opensans_semibold" />
+
+</LinearLayout>

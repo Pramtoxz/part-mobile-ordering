@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_fill_bottom_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_gray" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lbl_dialog_bottom_part_add"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_medium"
+            app:fontFamily="@font/opensans_semibold" />
+
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_18"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:text="@string/lbl_anda_ingin_menambahkan_part_darimana"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/txt_black_category"
+            android:layout_marginRight="@dimen/margin_20"
+            app:fontFamily="@font/opensans_regular"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btnSuggest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/btn_suggest_order"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_suggest_order"
+            android:textAllCaps="false"
+            android:textColor="@color/green_lapalma"
+            android:textSize="@dimen/font_15" />
+
+            <Button
+            android:id="@+id/btnSearchPart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_search_part"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

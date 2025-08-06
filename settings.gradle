@@ -1,0 +1,2 @@
+include ':app', ':eavlibrary'
+rootProject.name='Sales Tools'

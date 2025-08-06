@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view1"
+        android:background="@color/white_dark"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Status Prospek"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_medium" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/bg_fill_round_container_white"
+                android:divider="@color/gray80"
+                android:showDividers="middle">
+
+                <RadioButton
+                    android:id="@+id/rbStatusHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:drawableEnd="@drawable/selector_statusprospek"
+                    android:padding="@dimen/margin_20"
+                    android:text="Hot" />
+
+                <RadioButton
+                    android:id="@+id/rbStatusMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:drawableEnd="@drawable/selector_statusprospek"
+                    android:padding="@dimen/margin_20"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/rbStatusLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:drawableEnd="@drawable/selector_statusprospek"
+                    android:padding="@dimen/margin_20"
+                    android:text="Low" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/prospect_lbl_lampirkan_file"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/bg_fill_round_container_white"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_prospek_attachment"
+                    tools:itemCount="3"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Rencana Pembelian"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_medium" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/optional"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_smallest" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_fill_round_top_white"
+                android:padding="@dimen/margin_20">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/etInfoProspek_rencanaPembelian"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/hint_prospek_rencana_pembelian"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_small"
+                        android:longClickable="false"
+                        android:drawablePadding="@dimen/margin_medium"
+                        android:drawableEnd="@drawable/ic_filed_date"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/view1"
+        android:background="@color/white_dark" />
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="@dimen/margin_20">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnStep2_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_fill_round_btn_green">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:alpha="0.5"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Step 3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/activity_lbl_add_product"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:src="@drawable/ic_next_step"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

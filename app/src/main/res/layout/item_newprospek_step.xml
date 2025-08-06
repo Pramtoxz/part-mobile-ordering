@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layoutItemNewProspekStep_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_yellow_round_100">
+
+
+        <RelativeLayout
+            android:id="@+id/layoutItemNewProspekStep_no"
+            android:background="@drawable/bg_yellow_round_100"
+            android:backgroundTint="@color/white"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemNewProspekStep_no"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_small"
+                tools:text="1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutItemNewProspekStep_filled"
+            android:background="@drawable/bg_yellow_round_100"
+            android:backgroundTint="@color/green"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_step_done" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemNewProspekStep_nameStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_mid"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/app_name"
+            android:textColor="@color/txt_black" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivItemNewProspekStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:src="@drawable/ic_step_next" />
+
+
+</LinearLayout>

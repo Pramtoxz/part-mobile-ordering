@@ -1,0 +1,31 @@
+// Menggunakan plugins block yang lebih modern
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android' // Tambahkan ini sebagai praktik yang baik
+}
+
+android {
+    // 1. MENAMBAHKAN NAMESPACE (Memperbaiki error utama)
+    namespace 'com.ma.pmo.eavlibrary'
+
+    // 2. MENYAMAKAN VERSI SDK DENGAN MODUL APP
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 21 // Kita naikkan sedikit agar konsisten
+        targetSdkVersion 34
+    }
+
+    // Menambahkan ini agar konsisten dengan modul app
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 3. MENGGANTI 'com.android.support' DENGAN 'androidx'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}

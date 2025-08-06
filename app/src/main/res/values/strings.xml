@@ -1,0 +1,558 @@
+<resources>
+    <string name="app_name">MA PMO</string>
+
+    <!--Login-->
+    <string name="login_lbl_heading">MENARA AGUNG \nMobile Parts Ordering</string>
+    <string name="login_lbl_sub_heading">Salam SATU HATI, Silakan masukkan akun untuk \nmengakses Aplikasi</string>
+    <string name="login_lbl_title">Login</string>
+    <string name="login_lbl_username">Username</string>
+    <string name="login_lbl_password">Password</string>
+    <string name="login_lbl_btn_submit">Login</string>
+    <string name="login_lbl_alert_form">Harap lengkapi form</string>
+    <string name="login_lbl_loading">Logging in&#8230;</string>
+    <string name="login_lbl_iduser">ID User</string>
+    <string name="login_lbl_hint_iduser">ID User&#8230;</string>
+
+
+    <string name="forgot_lbl_info_forgot_email">Masukkan alamat email Anda, informasi kata sandi akan dikirim ke alamat email</string>
+
+    <string name="hint_type_email">type email...</string>
+
+    <string name="lbl_loading_harap_tunggu">Harap Tunggu..</string>
+    <string name="logout_lbl_loading">Logging out&#8230;</string>
+
+    <string name="wallboard_lbl_follow_up_prospek">Follow Up\nProspek</string>
+    <string name="wallboard_lbl_follow_up_spk">Follow Up\nSPK</string>
+    <string name="wallboard_lbl_follow_up_nsales">Follow Up Sales</string>
+
+    <string name="sales_lbl_prospek">Prospek</string>
+    <string name="sales_lbl_spk">SPK</string>
+    <string name="sales_lbl_sales">Sales</string>
+    <string name="sales_lbl_belum_fu">Belum FU</string>
+    <string name="stock_lbl_stok">Stok</string>
+
+    <string name="stock_apparel_lbl_ukuran">Ukuran</string>
+    <string name="stock_apparel_lbl_material">Material</string>
+    <string name="stock_apparel_lbl_warna">Warna</string>
+
+
+    <string name="activity_lbl_spk_document_incomplete">%1$d/\%2$d Document Incomplete</string>
+
+
+    <string name="unit_lbl_informasi_warna">Informasi Warna</string>
+    <string name="unit_lbl_available">Available</string>
+
+
+    <!--token expired-->
+    <string name="token_expired_lbl_title">Sesi anda telah berakhir, harap lakukan login ulang. Terimakasih.</string>
+    <string name="token_expired_lbl_password">Password</string>
+    <string name="token_expired_lbl_dialog_renew">Renew</string>
+    <string name="token_expired_lbl_dialog_logout">Logout</string>
+    <string name="token_expired_lbl_dialog_empty">Harap masukan password anda sebelum melakukan renew</string>
+
+    <!--fcm-->
+    <string name="fcm_default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!--error-->
+    <string name="error_fill_empty_field">Isi form ini terlebih dahulu</string>
+    <string name="error_server">Sorry, there is problem with server. Please try again.</string>
+    <string name="error_disconnect">Sorry, there is network or server problem. Please try again.</string>
+    <string name="error_network">Sorry, there is network problem. Please try again.</string>
+    <string name="error_no_data">Sorry, there is no data now. Please try again later.</string>
+    <string name="error_no_data_leaderboard">Sorry, there is no data for leaderboard at this time.</string>
+
+    <!--<string name="lbl_form_required">Fill the empty field first</string>-->
+    <string name="lbl_form_required">Isi form yang kosong terlebih dahulu</string>
+    <string name="lbl_form_select_required">Fill the select field first</string>
+
+
+    <!--toolbar-->
+    <string name="toolbar_inbox">Inbox</string>
+    <string name="toolbar_leaderboard">Papan Peringkat</string>
+    <string name="toolbar_kalendar_aktivitas">Kalendar Aktivitas</string>
+    <string name="toolbar_cek_stok">Cek Stock</string>
+    <string name="toolbar_sales">Sales</string>
+    <string name="toolbar_spk">SPK</string>
+    <string name="toolbar_detail_unit">Detail Unit</string>
+    <string name="toolbar_accessories">Accessories</string>
+    <string name="toolbar_subtitle_accessories">%1$d Barang</string>
+    <string name="toolbar_detail_perlengkapan">Detail Perlengkapan</string>
+    <string name="toolbar_stock_search">Pencarian Stock</string>
+    <string name="toolbar_data_pelanggan">Data Pelanggan</string>
+    <string name="toolbar_new_prospek">Buat Prospek Baru</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="dialog_title_logout">Keluar?</string>
+    <string name="dialog_content_logout">Anda akan keluar dari akun, lanjutkan?</string>
+
+    <string name="dialog_title_delete_cart">Hapus?</string>
+    <string name="dialog_content_delete_cart">Anda akan menghapus cart ini, lanjutkan?</string>
+
+    <string name="dialog_lbl_title">Title Dialog</string>
+    <string name="dialog_lbl_cancel">Cancel</string>
+    <string name="dialog_lbl_ok">OK</string>
+
+    <string name="btn_reset">Reset</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_favorite">Favorite</string>
+    <string name="btn_cart_add">Cart Add</string>
+    <string name="btn_filter">Filter</string>
+    <string name="btn_target_produk">Target Per Produk</string>
+    <string name="btn_submit">Submit</string>
+
+    <string name="home_lbl_leaderboard_rank">1 %1$s&lt;sup&gt;%2$s th&lt;/sup&gt;</string>
+
+    <!--hint edit-text-->
+    <string name="hint_type_username">type username&#8230;</string>
+    <string name="hint_type_password">type password&#8230;</string>
+    <string name="hint_search_sales">Search Sales</string>
+    <string name="hint_search">Search..</string>
+
+    <!-- leaderboard   -->
+    <string name="leaderboard_lbl_point">Point</string>
+    <string name="profile_lbl_elearning">E-learning</string>
+
+    <!--  Spinner Hint  -->
+    <string name="spinner_lbl_loading">- Mengambil data -</string>
+    <string name="spinner_lbl_filter_year_error">- Tidak ada Data ditemukan -</string>
+    <string name="spinner_lbl_filter_year_select">- Pilih Tahun -</string>
+    <string name="sales_hint_search_lbl_cari_unit">Cari Unit</string>
+    <string name="stock_lbl_aksesoris">Aksesoris</string>
+
+    <string name="toolbar_info_pelanggan">Informasi Pelanggan</string>
+    <string name="hint_NIK">NIK</string>
+    <string name="hint_NamaProspek">Nama Prospek</string>
+    <string name="hint_telp">No. Telp</string>
+    <string name="hint_tanggalProspek">Tanggal Prospek</string>
+    <string name="hint_pilih_dari_data_pelanggan">Pilih dari Data Pelanggan</string>
+    <string name="foto_pelanggan">Foto Pelanggan</string>
+    <string name="foto_pelanggan_di_lokasi">Foto pelanggan di lokasi</string>
+    <string name="hint_no_ktp">No. KTP</string>
+    <string name="hint_alamat">Alamat</string>
+    <string name="optional">Optional</string>
+    <string name="hint_alamat_kantor">Alamat Kantor</string>
+    <string name="hint_notelp_kantor">No. Telp Kantor</string>
+    <string name="hint_pref_uji_perjalanan">Preferensi Uji Perjalanan</string>
+    <string name="hint_pilih_product">Pilih Produk</string>
+    <string name="emptyState_produk">Tidak ada produk di sini, silakan tambahkan produk terlebih dahulu</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="empty">-</string>
+    <string name="hint_carinamanik">Cari nama pelanggan/NIK</string>
+    <string name="data_pelanggan">Data Pelanggan</string>
+    <string name="hint_carialamat">Tag Lokasi Alamat</string>
+    <string name="hint_tag_location">Atur pin lokasi pada posisi yang tepat</string>
+    <string name="hint_searchlocation">Search here...</string>
+    <string name="error_cant_use_location">Error Can\'t use location</string>
+    <string name="api_google_2">AIzaSyCbhDZBiY_9-bTxsym_Ho4ZEM1pzJqtO1U</string>
+    <string name="activity_lbl_add_product">Add Product</string>
+    <string name="produk_lbl_total_unit">Total Unit</string>
+    <string name="produk_lbl_total_accessories">Total Accessories (%1$d)</string>
+    <string name="produk_lbl_total_perlengkapan">Total Perlengkapan (%1$d)</string>
+    <string name="produk_lbl_grand_total">Grand Total</string>
+    <string name="message_state_hint_search_customer">Silahkan ketik nama pelanggan untuk mencari</string>
+    <string name="hint_prospect_pekerjaan">Pekerjaan</string>
+    <string name="hint_customer_tipe_unit">Kode Tipe Unit</string>
+    <string name="toast_error_empty_foto">Silahkan lengkapi form foto terlebih dahulu</string>
+    <string name="prospek_lbl_kartu_keluarga">Kartu Keluarga</string>
+    <string name="prospek_lbl_lihat_dokumen">Lihat Dokumen</string>
+    <string name="hint_prospek_rencana_pembelian">Rencana Pembelian</string>
+    <string name="prospect_lbl_lampirkan_file">Lampirkan File</string>
+    <string name="dialog_lbl_title_kode_unit_tipe">Kode Unit Tipe</string>
+    <string name="produk_lbl_prospek_amp_spk"><![CDATA[Prospek & SPK]]></string>
+    <string name="btn_add">Add</string>
+    <string name="action_update_cart">Update Cart</string>
+    <string name="product_lbl_qty">Qty</string>
+    <string name="action_no_deal">No Deal</string>
+    <string name="action_deal">Deal</string>
+    <string name="action_ganti_status">Ganti Status</string>
+    <string name="prospect_customer_lbl_lihat_dashboard_pelanggan">Lihat dashboard pelanggan</string>
+    <string name="action_contact">Contact</string>
+    <string name="customer_lbl_informasi_pelanggan">Informasi Pelanggan</string>
+    <string name="customer_lbl_informasi_detail_pelanggan">Informasi Detail Pelanggan</string>
+    <string name="customer_lbl_keperluan_dokumen">Keperluan Dokumen</string>
+    <string name="customer_lbl_daftar_follow_up">Daftar Follow Up</string>
+    <string name="lbl_home_salesman_rank">SALESMAN RANK</string>
+    <string name="lbl_home_pencapaian">Pencapaian</string>
+    <string name="lbl_home_produktivitas">Produktivitas</string>
+    <string name="lbl_home_pencapaian_ncampaign_toko">Pencapaian \nCampaign Toko</string>
+    <string name="lbl_home_realisasi_visit_nactual_target_n_realisasi">Realisasi Visit  \nActual/Target/ \n%Realisasi</string>
+    <string name="lbl_home_efektifitas_visit_nactual_target_n_efektifitas">Efektifitas Visit \nActual/Target/ \n%Efektifitas</string>
+    <string name="lbl_title_catalogue">Catalogue</string>
+    <string name="lbl_catalogue_md_catalogue">MD Catalogue</string>
+    <string name="lbl_dealer_competitior">Competitior</string>
+    <string name="lbl_dealer_salesman_visit">Salesman Visit</string>
+    <string name="lbl_dealer_title">Dealer</string>
+    <string name="lbl_order_title">Order</string>
+    <string name="lbl_order_ongoing_order">Ongoing Order</string>
+    <string name="lbl_order_history">Order History</string>
+    <string name="hint_search_parts_similarity">Similarity</string>
+    <string name="hint_search_parts_part_number">Part Number</string>
+    <string name="lbl_search_parts_info_header">Silakan isi minimal 2 field dengan 5 digit kata kunci pencarian</string>
+    <string name="hint_search_parts_part_deskripsi">Part Deskripsi</string>
+    <string name="hint_search_parts_kelompok_barang">Kelompok Barang</string>
+    <string name="hint_search_parts_type_motor_part">Type Motor Part</string>
+    <string name="btn_search_part">Search Part</string>
+
+    <string name="lbl_empty_state">Tidak ada data \nyang dapat ditampilkan</string>
+    <!--<string name="lbl_error_network_state">Network error \nMake sure your connection is stable</string>-->
+    <!--<string name="lbl_error_server">Something Wrong \nWith Server</string>-->
+    <string name="lbl_error_network_state">Kesalahan jaringan\nPastikan koneksi Anda stabil</string>
+    <string name="lbl_error_server">Ada sesuatu yang salah\nDengan Server</string>
+
+    <!--<string name="state_token_exp">Please Refresh\nAfter renew token</string>-->
+    <string name="state_token_exp">Harap klik refresh\nsetelah memperbarui token</string>
+
+    <string name="hint_cari_tipe_motor">Cari Tipe Motor</string>
+    <string name="lbl_title_campaign_promo">Campaign Promo</string>
+    <string name="lbl_tab_brosur_promo">Brosur Promo</string>
+    <string name="lbl_tab_part_promo">Part Promo</string>
+    <string name="lbl_average_order_to_nmd">Average Order to \nMd</string>
+    <string name="lbl_pencapaian_point_program">Pencapaian Point \nProgram</string>
+    <string name="lbl_phone_number_profile">Phone Number</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_title_cek_stock_part">Cek Stock Part</string>
+    <string name="lbl_title_search_parts">Search Parts</string>
+    <string name="lbl_hint_type_part_number_desc_or_type">Type part number, desc, or type</string>
+
+    <string name="lbl_pencarian_favorit">Pencarian Favorit</string>
+    <string name="lbl_semua_kode_dealer">Semua Kode Dealer</string>
+    <string name="lbl_semua_kelompok_barang">Semua Kelompok Barang</string>
+    <string name="lbl_semua_tipe_motor">Semua Tipe Motor</string>
+
+    <string name="dialog_lbl_loading">Loading</string>
+    <string name="dialog_lbl_please_wait">Harap Tunggu..</string>
+    <string name="lbl_loading_download">Sedang mendownload file...</string>
+    <string name="lbl_salesman_target">Target</string>
+    <string name="lbl_campaign_promo_begin_effdate">Begin effdate</string>
+    <string name="lbl_campaign_promo_end_effdate">End effdate</string>
+    <string name="lbl_dealer_target">Target</string>
+    <string name="lbl_katalog_pilih_kategori">PILIH KATEGORI</string>
+    <string name="lbl_pilih_bulan">Pilih Bulan</string>
+    <string name="btn_view_dashboard">View Dashboard</string>
+    <string name="btn_logout">Logout</string>
+    <string name="lbl_title_part_number_search">Part Number Search</string>
+    <string name="lbl_title_favorite">Favorite</string>
+    <string name="lbl_more_information">More Information</string>
+    <string name="lbl_type_motor">Type Motor</string>
+    <string name="lbl_hotline_flag">Hotline Flag</string>
+    <string name="lbl_hotline_max_qty">Hotline Max Quantity</string>
+    <string name="lbl_flag_numbering">Flag Numbering</string>
+    <string name="lbl_kit_flag">Kit Flag</string>
+    <string name="lbl_kit_hgp_acc_tl">Kit HGP/ACC/TL</string>
+    <string name="lbl_kelipatan_dus">Kelipatan Dus</string>
+    <string name="lbl_title_part_details">Part Details</string>
+    <string name="lbl_title_promo_details">Promo Details</string>
+    <string name="lbl_detail_promo">Detail Promo</string>
+    <string name="btn_tutup_detail_promo">Tutup Detail Promo</string>
+    <string name="lbl_hint_cari_kelompok_barang">Cari Kelompok Barang</string>
+    <string name="lbl_urutkan_berdasarkan">Urutkan Berdasarkan</string>
+    <string name="btn_apply_filter">Apply Filter</string>
+    <string name="lbl_hint_masukan_nomor_order">Masukkan nomor order</string>
+    <string name="lbl_title_ongoing_order">On Going Order</string>
+    <string name="lbl_detail_barang">Detail Barang</string>
+    <string name="lbl_kode_dealer">Kode Dealer</string>
+    <string name="lbl_part_number">Part Number</string>
+    <string name="lbl_deskripsi">Deskripsi</string>
+    <string name="lbl_kelompok_barang">Kelompok Barang</string>
+    <string name="lbl_no_invoice">No. Invoice</string>
+    <string name="lbl_tanggal_invoice">Tanggal Invoice</string>
+    <string name="lbl_qty_invoice">Quantity Invoice</string>
+    <string name="lbl_amount_invoice">Amount Invoice</string>
+    <string name="lbl_order_suggestion">Order \nSuggestion</string>
+    <string name="lbl_promo_campaign">Promo \nCampaign</string>
+    <string name="lbl_kembali">Kembali</string>
+    <string name="hint_cari_kode_dealer">Cari Kode Dealer</string>
+    <string name="hint_add_cari_kode_dealer">Tambah Pencarian Dealer</string>
+    <string name="lbl_tracking_order">Tracking Order</string>
+    <string name="lbl_silakan_pilih_dealer_terlebih_dulu">Silakan Pilih Dealer Terlebih Dulu!</string>
+    <string name="btn_cari_dealer">Cari Dealer</string>
+    <string name="lbl_title_competitor">Competitor</string>
+    <string name="btn_add_report_kompetitor">Tambah Report Kompetitor</string>
+    <string name="lbl_efektivitas">Efektivitas</string>
+    <string name="lbl_realisasi_visit">Realisasi Visit</string>
+    <string name="lbl_visit">Visit</string>
+    <string name="lbl_title_salesman_visit">Salesman Visit</string>
+    <string name="btn_selanjutnya">Selanjutnya</string>
+    <string name="lbl_nama_dealer">Nama Dealer</string>
+    <string name="lbl_title_add_new_visit">Add New Visit</string>
+    <string name="lbl_rencana_visit">Rencana Visit</string>
+    <string name="hint_pilih_rencana_visit">-Pilih Rencana Visit-</string>
+    <string name="lbl_dealer">Dealer</string>
+    <string name="hint_pilih_dealer">-Pilih Dealer-</string>
+    <string name="lbl_tanggal_awal">Tanggal Awal</string>
+    <string name="hint_pilih_tanggal_awal">-Pilih tanggal awal-</string>
+    <string name="lbl_tanggal_akhir">Tanggal Akhir</string>
+    <string name="hint_pilih_tanggal_akhir">-Pilih tanggal akhir-</string>
+    <string name="btn_view_efektivitas">View Efektivitas</string>
+    <string name="lbl_title_efektivitas">Efektivitas</string>
+    <string name="hint_cari_kode_nama_dealer">Cari Kode atau nama Dealer</string>
+    <string name="hint_cari_kode_nama_salesman">Cari Kode atau nama Salesman</string>
+    <string name="hint_cari_kode_nama_koordinator_salesman">Cari Kode atau nama Koordinator</string>
+    <string name="btn_apply_dealer">Apply Dealer</string>
+    <string name="lbl_batalkan">Batalkan</string>
+    <string name="lbl_koordinator_salesman">Koordinator Salesmen</string>
+    <string name="hint_pilih_koordinator_salesmen">-Pilih Koordinator Salesmen-</string>
+    <string name="lbl_part_list">PARTS LIST</string>
+    <string name="lbl_total_amount">Total Amount</string>
+    <string name="lbl_title_cart">Cart</string>
+    <string name="lbl_pilih_kebutuhan_data_yang_anda_perlukan_header">Pilih kebutuhan data yang Anda perlukan!</string>
+    <string name="btn_lihat_skema">Lihat Skema</string>
+    <string name="lbl_title_filter_list">Filter List</string>
+    <string name="lbl_dialog_bottom_part_add">Ingin Menambahkan Part?</string>
+    <string name="lbl_anda_ingin_menambahkan_part_darimana">Anda ingin menambahkan part \ndarimana?</string>
+    <string name="btn_suggest_order">Suggest Order</string>
+    <string name="hint_masukkan_nomor_order">Masukkan nomor order</string>
+    <string name="lbl_order_quantity">Order Quantity</string>
+    <string name="lbl_amount_order">Amount Order</string>
+    <string name="lbl_title_history_order">History Order</string>
+    <string name="lbl_pilih_skema_pembelian">PILIH SKEMA PEMBELIAN</string>
+    <string name="lbl_detail_skema_pembelian">DETAIL SKEMA PEMBELIAN</string>
+    <string name="lbl_quantity_back_order">Quantity Back Order</string>
+    <string name="lbl_amount_back_order">Amount Back Order</string>
+    <string name="lbl_quantity_suggest_order">Quantity Suggest Order</string>
+    <string name="lbl_amount_suggest_order">Amount Suggest Order</string>
+    <string name="lbl_total_quantity_bold">TOTAL QUANTITY</string>
+    <string name="lbl_pcs_bold">PCS</string>
+    <string name="lbl_total_belanja">Total Belanja</string>
+    <string name="btn_set_skema_pembelian">Set Skema Pembelian</string>
+    <string name="btn_set_quantity_manual">Set Quantity Manual</string>
+    <string name="lbl_title_skema_pembelian">Skema Pembelian</string>
+    <string name="lbl_list_item">LIST ITEM</string>
+    <string name="lbl_check_all_items_bold">CHECK ALL ITEMS</string>
+    <string name="lbl_discount">Discount</string>
+    <string name="lbl_sub_total">Sub Total</string>
+    <string name="lbl_title_details">Details</string>
+    <string name="lbl_campaign_details">Campaign Details</string>
+    <string name="lbl_judul_aktivitas_kompetitor">Judul Aktivitas Kompetitor</string>
+    <string name="lbl_produk">Produk</string>
+    <string name="lbl_begin_effdate">Begin Effdate</string>
+    <string name="lbl_last_effdate">Last Effdate</string>
+    <string name="lbl_keterangan_promo">Keterangan Promo</string>
+    <string name="lbl_title_competitor_details">Competitor Details</string>
+    <string name="hint_kode_dealer">Kode Dealer</string>
+    <string name="hint_nama_kompetitor">Nama Kompetitor</string>
+    <string name="hint_judul_aktivitas_kompetitor">Judul Aktivitas Kompetitor</string>
+    <string name="hint_produk">Produk</string>
+    <string name="lbl_title_add_report_competitor">Add Report Competitor</string>
+    <string name="hint_begin_effdate">Begin Effdate</string>
+    <string name="hint_last_effdate">Last Effdate</string>
+    <string name="lbl_upload_campaign_image">Upload Campaign Image</string>
+    <string name="hint_keterangan_promo">Keterangan Promo</string>
+    <string name="btn_add_competitor">Add Competitor</string>
+    <string name="lbl_preview">Preview</string>
+    <string name="lbl_gallery">Gallery</string>
+    <string name="lbl_camera">Camera</string>
+    <string name="lbl_add_quantity_bold">ADD QUANTITY</string>
+    <string name="btn_submit_quantity">Submit Quantity</string>
+    <string name="lbl_pengiriman">PENGIRIMAN</string>
+    <string name="hint_month_deliver">Month Deliver</string>
+    <string name="lbl_detail_pembelian_bold">DETAIL PEMBELIAN</string>
+    <string name="lbl_diskon">Diskon</string>
+    <string name="btn_submit_order">Submit Order</string>
+    <string name="lbl_title_summary">Summary</string>
+    <string name="lbl_status_pengiriman">Status Pengiriman</string>
+    <string name="btn_create_ro">Create RO</string>
+    <string name="lbl_title_order_selesai">Order Selesai</string>
+    <string name="lbl_nomor_order_anda">Nomor Order Anda</string>
+    <string name="lbl_month_deliver">Month Deliver</string>
+    <string name="btn_ya_order_lagi">Ya, Order Lagi</string>
+    <string name="lbl_tidak">Tidak</string>
+    <string name="btn_set_quantity">Set Quantity</string>
+    <string name="lbl_campaign_image_upload">Campaign Image Uploaded</string>
+    <string name="lbl_title_order_sugestion">Order Suggestion</string>
+    <string name="lbl_title_tracking_order">Tracking Order</string>
+    <string name="lbl_pilih_salah_satu_rencana_visit">PILIH SALAH SATU RENCANA VISIT</string>
+    <string name="lbl_title_rencana_visit">Rencana Visit</string>
+    <string name="lbl_select_dealer_first">Pilih Kode Dealer Terlebih Dahulu</string>
+    <string name="lbl_title_sales_visit">Sales Visit</string>
+    <string name="btn_coba_lagi">Coba Lagi</string>
+    <string name="btn_checkin">Check-in</string>
+    <string name="btn_tidak">Tidak</string>
+    <string name="lbl_title_bottom_sales_checkin_berhasil">Checkin Berhasil!</string>
+    <string name="lbl_content_bottom_sales_checkin_berhasil">Apakah Anda ingin melakukan check-out\n salesman visit?</string>
+    <string name="lbl_lengkapi_form_untuk_cek_realisasi_visit">Lengkapi form untuk cek Realisasi Visit</string>
+    <string name="hint_pilih_koordinator_salesman">-Pilih Koordinator Salesman-</string>
+    <string name="lbl_salesman">Salesman</string>
+    <string name="hint_pilih_salesman">-Pilih Salesman-</string>
+    <string name="lbl_title_realisasi_visit">Realisasi Visit</string>
+    <string name="btn_view_plan_vs_actual">View Plan vs Actual</string>
+    <string name="lbl_bo_quantity">BO Quantity</string>
+    <string name="lbl_shipping_quantity">Shipping Quantity</string>
+    <string name="lbl_invoice_and_pengiriman"><![CDATA[INVOICE & PENGIRIMAN]]></string>
+    <string name="lbl_no_surat_jalan">No. Surat Jalan</string>
+    <string name="lbl_tanggal_surat_jalan">Tanggal Surat Jalan</string>
+    <string name="lbl_ekspedisi">Ekspedisi</string>
+    <string name="lbl_tanggal_jatuh_ntempo">Tanggal Jatuh \nTempo</string>
+    <string name="lbl_amount_jatuh_tempo_nminimum">Amount Jatuh Tempo \nMinimum</string>
+    <string name="lbl_title_notifikasi">Notifikasi</string>
+    <string name="lbl_tanggal_status">Tanggal Status</string>
+    <string name="lbl_tanggal_jatuh_tempo">Tanggal Jatuh Tempo</string>
+    <string name="lbl_amount_jatuh_tempo_minimum">Amount Jatuh Tempo Minimum</string>
+    <string name="lbl_dot"> • </string>
+    <string name="lbl_pilih_kategori">Pilih Kategori</string>
+    <string name="lbl_tab_check_kredit_limit">Check Kredit Limit</string>
+    <string name="lbl_tab_check_jatuh_tempo">Check Jatuh Tempo</string>
+    <string name="lbl_title_kredit_limit">Kredit Limit</string>
+    <string name="lbl_title_collection">Collection</string>
+    <string name="lbl_title_collection_notification">Collection Notification</string>
+    <string name="lbl_title_collection_payment">Collection Payment</string>
+    <string name="lbl_upload_campaign_collection">Upload Proof Of Payment</string>
+    <string name="lbl_title_collection_list">Collection List</string>
+    <string name="lbl_title_collection_list_selected"> %d Collection List Terpilih</string>
+    <string name="lbl_collection_quantity">Order Quantity</string>
+    <string name="lbl_collection_piutang">Piutang</string>
+    <string name="lbl_lengkapi_form_untuk_cek_kredit_limit">Lengkapi form untuk cek kredit limit</string>
+    <string name="lbl_lengkapi_form_untuk_cek_jatuh_tempo">Lengkapi form untuk cek jatuh tempo</string>
+    <string name="btn_check_jatuh_tempo">Check Jatuh Tempo</string>
+    <string name="btn_check_credit_limit">Check Credit Limit</string>
+    <string name="lbl_plafon_kredit_limit">Plafon Kredit Limit</string>
+    <string name="lbl_maksimum_open">Maksimum Open</string>
+    <string name="lbl_title_kredit_limit_details">Kredit Limit Details</string>
+    <string name="lbl_semua_dealer">Semua Dealer</string>
+    <string name="lbl_semua_salesman">Semua Salesman</string>
+    <string name="lbl_semua_koordinator">Semua Koordinator</string>
+    <string name="lbl_dealer_yang_terhubung_dengan_anda">Dealer yang terhubung dengan Anda</string>
+    <string name="lbl_salesman_yang_terhubung_dengan_anda">Salesman yang terhubung dengan Anda</string>
+    <string name="lbl_list_realisasi_visit_bold">LIST REALISASI VISIT</string>
+    <string name="lbl_list_efektivitas_visit_bold">LIST EFEKTIVITAS VISIT</string>
+    <string name="lbl_title_plan_actual">Plan vs Actual</string>
+    <string name="lbl_actual">Actual</string>
+    <string name="lbl_target">Target</string>
+    <string name="lbl_realisasi">Realisasi</string>
+    <string name="lbl_visit_details">Visit Details</string>
+    <string name="lbl_actual_visit">Actual Visit</string>
+    <string name="lbl_pilih_kategori_bold">PILIH KATEGORI</string>
+    <string name="lbl_kredit_limit">Kredit Limit</string>
+    <string name="lbl_total_omzet">Total Omzet</string>
+    <string name="lbl_title_preview_image">Preview Image</string>
+    <string name="lbl_forgot_password">Lupa Password?</string>
+    <string name="btn_kirim">Kirim</string>
+    <string name="btn_oke">Oke</string>
+    <string name="btn_send">Send</string>
+    <string name="lbl_ganti_password">Ganti Password</string>
+    <string name="btn_ganti_kata_sandi">Ganti Password</string>
+    <string name="changepasword_lbl_masukkan_kata_sandi_saat_ini_dan_kata_sandi_baru_untuk_mengganti_kata_sandi">Masukkan password lama dan password baru Anda</string>
+    <string name="lbl_password_saat_ini">Password Saat ini</string>
+    <string name="hint_type_password_saat_ini">type password saat ini...</string>
+    <string name="lbl_ulangi_password_baru">Ulangi Password Baru</string>
+    <string name="lbl_password_baru">Password Baru</string>
+    <string name="lbl_lupa_password">Lupa Password</string>
+    <string name="btn_ulangi">Ulangi</string>
+    <string name="lbl_overdue">Overdue</string>
+    <string name="lbl_title_credit_ovedue_details">Transaksi Jatuh Tempo</string>
+    <string name="lbl_upload_campaign_kompetitor">Upload Campaign Kompetitor</string>
+    <string name="lbl_summary_efektivitas_visit">Summary Efektivitas Visit</string>
+    <string name="hint_nama_dealer">Nama Dealer</string>
+    <string name="lbl_alamat">Alamat</string>
+    <string name="lbl_upload_image">Upload Image</string>
+
+    <string name="btn_retake_photo">Ambil ulang foto</string>
+    <string name="lbl_telepon">Telepon</string>
+    <string name="lbl_keterangan">Keterangan</string>
+    <string name="btn_tambah_dealer">Tambah Dealer</string>
+    <string name="lbl_title_add_new_dealer">Add New Dealer</string>
+    <string name="lbl_lengkapi_form_untuk_add_new_dealer">Lengkapi form untuk add new dealer</string>
+
+    <string name="error_empty" translatable="false">Silahkan isi %1$s</string>
+    <string name="lbl_warning_isikan_photo_terlebih_dahulu">Isikan Photo terlebih dahulu</string>
+    <string name="lbl_warning_password_yang_diulangi_berbeda">Password baru dengan password yang diulangi berbeda</string>
+
+    <string name="alert_message_menu_not_access_tracking_order">Anda tidak mempunyai akses tracking order</string>
+    <string name="alert_message_menu_not_access_home">Anda tidak mempunyai akses home dashboard</string>
+    <string name="alert_message_menu_not_access_dealer">Anda tidak mempunyai akses dealer</string>
+
+    <string name="btn_sebelumnya">Sebelumnya</string>
+    <string name="btn_add_plus">Add +</string>
+    <string name="lbl_habis">Habis</string>
+
+
+    <string name="month_januari">Januari</string>
+    <string name="month_februari">Februari</string>
+    <string name="month_maret">Maret</string>
+    <string name="month_april">April</string>
+    <string name="month_mei">Mei</string>
+    <string name="month_juni">Juni</string>
+    <string name="month_juli">Juli</string>
+    <string name="month_agustus">Agustus</string>
+    <string name="month_september">September</string>
+    <string name="month_oktober">Oktober</string>
+    <string name="month_november">November</string>
+    <string name="month_desember">Desember</string>
+    <string name="lbl_anda_masih_check_in_di_dealer">Anda masih Check-in di dealer</string>
+
+    <string name="lbl_dialog_title_checkout">Ingin Checkout Visit?</string>
+    <string name="lbl_dialog_message_checkout">Anda yakin ingin Checkout Visit dari \ndealer yang Anda kunjungi ?</string>
+
+    <string name="lbl_summary_visit_dealer">Summary Visit Dealer</string>
+
+    <string name="alert_message_stock_tidak_tersedia_stock_habis">Part yang anda pilih tidak tersedia \natau stock telah habis</string>
+
+    <string name="lbl_sort_tanggal_paling_baru">Tanggal Paling Baru</string>
+    <string name="lbl_sort_tanggal_paling_lama">Tanggal Paling Lama</string>
+    <string name="lbl_sort_amount_terendah_tertinggi">Amount Terendah - Tertinggi</string>
+    <string name="lbl_sort_amount_tertinggi_terendah">Amount Tertinggi - Terendah</string>
+    <string name="lbl_sort_no_po_paling_baru">No PO Paling Baru</string>
+    <string name="lbl_sort_no_po_paling_lama">No PO Paling Lama</string>
+    <string name="lbl_sort_tanggal_order_date_range">Tanggal Order - Date Range</string>
+    <string name="lbl_sort_nominal_order_nominal_range">Nominal order - Nominal range</string>
+    <string name="btn_tracking_order">Tracking Order</string>
+    <string name="hint_part_number">Part Number</string>
+    <string name="lbl_hint_month">Month</string>
+    <string name="lbl_hint_month_required">Month (*wajib diisi)</string>
+    <string name="lbl_hint_cari_dealer">Cari Dealer</string>
+    <string name="lbl_hint_cari_dealer_required">Cari Dealer (*wajib diisi)</string>
+    <string name="lbl_hint_nomor_order">Nomor Order</string>
+    <string name="lbl_status_bo">Status BO</string>
+    <string name="lbl_header_info_tracking_order">Silahkan lengkapi field di bawah untuk melakukan tracking order</string>
+    <string name="lbl_status_invoice">Status Invoice</string>
+    <string name="lbl_status_shipping">Status Shipping</string>
+    <string name="alert_spinner_status_bo">Pilih Status BO terlebih dahulu</string>
+    <string name="alert_spinner_status_invoice">Pilih Status Invoice terlebih dahulu</string>
+    <string name="alert_spinner_status_shipping">Pilih Status Shipping terlebih dahulu</string>
+
+    <string name="lbl_spinner_pilih_status_bo">Pilih status BO</string>
+    <string name="lbl_spinner_open">open</string>
+    <string name="lbl_spinner_close">close</string>
+    <string name="lbl_spinner_pilih_status_invoice">Pilih status Invoice</string>
+    <string name="lbl_spinner_sudah_bayar">sudah bayar</string>
+    <string name="lbl_spinner_belum_bayar">belum bayar</string>
+    <string name="lbl_spinner_pilih_shipping">Pilih status Shipping</string>
+    <string name="menu_filter">Filter</string>
+
+    <string name="lbl_required_month">Pilih Bulan terlebih dahulu</string>
+    <string name="lbl_required_dealer">Pilih Dealer terlebih dahulu</string>
+    <string name="lbl_quantity_average_pembelian">Quantity Average Pembelian</string>
+    <string name="lbl_amount_average_pembelian">Amount Average Pembelian</string>
+    <string name="lbl_flag_campaign_promo">Flag Campaign Promo</string>
+    <string name="lbl_quantity_on_order">Quantity On Order</string>
+    <string name="lbl_quantity_amount_order">Quantity Amount Order</string>
+
+    <string name="lbl_warning_masukkan_minimal_5_karakter">*Masukkan minimal 5 karakter</string>
+    <string name="hint_add_salesman">Add Salesman</string>
+    <string name="hint_add_dealer">Add Dealer</string>
+    <string name="hint_add_koordinator">Add Koordinator</string>
+    <string name="alert_select_koordinator_salesman_first">Pilih koordinator salesman terlebih dahulu</string>
+    <string name="alert_pilih_koordinator_terlebih_dahulu">Pilih koordinator terlebih dahulu</string>
+    <string name="alert_select_salesman_first">Pilih salesman terlebih dahulu</string>
+    <string name="lbl_list_koordinator">List Koordinator</string>
+    <string name="lbl_list_salesman">List Salesman</string>
+    <string name="lbl_dashboard">Dashboard</string>
+    <string name="lbl_jatuh_tempo">Jatuh Tempo</string>
+    <string name="sort_partnumber_a_z">Part Number A-Z</string>
+    <string name="sort_deskripsi_a_z">Deskripsi A-Z</string>
+    <string name="sort_available_part">Available Part</string>
+    <string name="sort_not_available">Not Available</string>
+    <string name="sort_promo">Promo</string>
+    <string name="sort_tidak_promo">Tidak Promo</string>
+    <string name="filter_part_number">Part Number</string>
+    <string name="filter_part_deskripsi">Part Deskripsi</string>
+    <string name="filter_het">HET</string>
+    <string name="filter_quantity_pembelian_w1">Quantity Pembelian W1</string>
+    <string name="filter_amount_pembelian_w1">Amount Pembelian W1</string>
+    <string name="filter_quantity_pembelian_w2">Quantity Pembelian W2</string>
+    <string name="filter_amount_pembelian_w2">Amount Pembelian W2</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:Skeleton="http://schemas.android.com/tools">
+
+    <Space
+        android:id="@+id/spView"
+        android:layout_width="@dimen/margin_medium"
+        android:layout_height="wrap_content"/>
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:foreground="?selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_6"
+        app:cornerRadius="@dimen/margin_15"
+        app:backgroundColor="@color/grey_divider">
+
+        <FrameLayout
+            app:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <io.rmiri.skeleton.SkeletonGroup
+                android:id="@+id/skGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                Skeleton:SK_BackgroundViewsColor="#E1E1E1"
+                Skeleton:SK_animationAutoStart="true"
+                Skeleton:SK_animationDirection="LTR"
+                Skeleton:SK_animationDuration="1000"
+                Skeleton:SK_animationFinishType="gradient"
+                Skeleton:SK_animationNormalType="gradient"
+                Skeleton:SK_backgroundMainColor="@android:color/transparent"
+                Skeleton:SK_highLightColor="#faefef">
+
+                <io.rmiri.skeleton.SkeletonView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    Skeleton:SK_padding="0dp"
+                    Skeleton:SK_shapeType="rect">
+
+
+                    <ImageView
+                        android:id="@+id/ivPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+
+                </io.rmiri.skeleton.SkeletonView>
+
+
+            </io.rmiri.skeleton.SkeletonGroup>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/vBgOpacity"
+                android:background="@color/black_opacity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:gravity="center"
+                app:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:src="@drawable/ic_camera_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvUploadFoto"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textSize="@dimen/font_11"
+                    app:fontFamily="@font/opensans_regular"
+                    android:gravity="center"
+                    android:text="Upload Foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </com.loopeer.shadow.ShadowView>
+
+
+</LinearLayout>

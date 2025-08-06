@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/red_crimson"
+    android:id="@+id/rootView"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_40"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/lbl_tracking_order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+        </LinearLayout>
+
+
+
+        <ScrollView
+            android:background="@drawable/bg_fill_bottom_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:layout_marginTop="30dp"
+                    app:fontFamily="@font/opensans_italic"
+                    android:text="@string/lbl_header_info_tracking_order"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:background="@color/transparent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etPartNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:hint="@string/hint_part_number"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivPartNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="@string/lbl_warning_masukkan_minimal_5_karakter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_italic"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/transparent"
+                        android:paddingTop="@dimen/margin_2"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etPartDeskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:hint="@string/hint_search_parts_part_deskripsi"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivPartDeskripsi"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etMonth"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:drawableRight="@drawable/ic_calendar_form"
+                            android:hint="@string/lbl_hint_month_required"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivMonth"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+                    <LinearLayout
+                        android:id="@+id/viewCariDealer"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="30dp"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etCariDealer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:background="@color/transparent"
+                            android:drawableRight="@drawable/ic_search_brown"
+                            android:hint="@string/lbl_hint_cari_dealer_required"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivTypeMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/grey_divider_1" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/transparent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etNomorOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:enabled="true"
+                            android:hint="@string/lbl_hint_nomor_order"
+                            android:inputType="textCapSentences"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/vDivNomorOrder"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:background="@color/grey_divider_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_status_bo"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/spStatusBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/transparent"
+                            android:overlapAnchor="false" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_dropdown" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/grey_divider_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_status_invoice"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/spStatusInvoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/transparent"
+                            android:overlapAnchor="false" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_dropdown" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_status_shipping"
+                        android:textColor="@color/grey_hint"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/spStatusShipping"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/transparent"
+                            android:overlapAnchor="false" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_dropdown" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/grey_divider_1" />
+
+
+                    <Button
+                        android:id="@+id/btnTrackingOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_btn_green_search_parts"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:text="@string/btn_tracking_order"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/content_view_state"/>
+
+</FrameLayout>

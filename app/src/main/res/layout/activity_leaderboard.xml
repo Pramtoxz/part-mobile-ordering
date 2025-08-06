@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_dark"
+    android:id="@+id/rlContent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/flMyLeaderboard"
+        android:layout_below="@+id/toolbar">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLeaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_leaderboard" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/content_loading_view"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flMyLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_fill_bottom_dialog"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/bg_gradient_leaderboard_green"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_mid">
+
+            <TextView
+                android:id="@+id/tvMyRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_small"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="10"
+                android:textColor="@color/txt_white"
+                android:textSize="@dimen/txt_medium" />
+
+            <ImageView
+                android:id="@+id/ivMyStatus"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:src="@drawable/ic_peringkat_up" />
+
+            <ImageView
+                android:id="@+id/ivMyPhoto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_contact_phone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Prisia Jodi"
+                    android:textColor="@color/txt_white"
+                    android:textSize="@dimen/txt_small" />
+
+                <TextView
+                    android:id="@+id/tvMyInfoPeringkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Naik 2 peringkat"
+                    android:textColor="@color/txt_white"
+                    android:textSize="@dimen/txt_smallest" />
+
+                <!--           Nama dan peringkat     -->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/tvMyScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_extra_small"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="200"
+                    android:textColor="@color/txt_white"
+                    android:textSize="@dimen/txt_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_extra_small"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="@string/leaderboard_lbl_point"
+                    android:textColor="@color/txt_white"
+                    android:textSize="@dimen/txt_smallest" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

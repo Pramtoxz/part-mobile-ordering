@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_fill_bottom_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_width="40dp"
+            android:foreground="?selectableItemBackground"
+            android:layout_height="6dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_fill_round_gray" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lbl_pilih_bulan"
+            android:layout_marginTop="@dimen/margin_10"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_medium"
+            app:fontFamily="@font/opensans_semibold" />
+
+
+        <Space android:layout_width="match_parent" android:layout_height="@dimen/margin_20"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ahm.parts.ordering.helper.WheelView
+                android:id="@+id/wheel"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </ahm.parts.ordering.helper.WheelView>
+            <!--<com.crocodic.spinnerwheel.activity.WheelVerticalView-->
+            <!--android:id="@+id/wheelUpdateStatus"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp" />-->
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnViewDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_22"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_view_dashboard"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_customer" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llDashboardPelanggan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_21_5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10_5"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/prospect_customer_lbl_lihat_dashboard_pelanggan"
+                    android:textColor="@color/txt_hint_login"
+                    android:textSize="@dimen/txt_small" />
+
+                <ImageButton
+                    android:layout_width="@dimen/icon_medium"
+                    android:layout_height="@dimen/icon_medium"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_scroll_up"
+                    android:tint="@color/txt_hint_login" />
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="@dimen/margin_medium"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_extra_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/ivIconProspect"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="@dimen/margin_extra_small"
+                            android:layout_marginRight="@dimen/margin_extra_small"
+                            android:src="@drawable/profile_dummy"
+                            app:riv_corner_radius="@dimen/form_login_radius_100" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_extra_small"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_medium"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvCustomerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Bambang Oke"
+                                    android:textColor="@color/txt_black"
+                                    android:textSize="@dimen/txt_default"
+                                    app:fontFamily="@font/opensans_semibold" />
+
+                                <TextView
+                                    android:id="@+id/tvCustomerPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/margin_5"
+                                    android:text="080829192121"
+                                    android:textColor="@color/txt_black"
+                                    android:textSize="@dimen/txt_small"
+                                    app:fontFamily="@font/opensans_regular" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <Button
+                                    android:id="@+id/btnContact"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/bg_btn_green_round_prospect"
+                                    android:fontFamily="@font/opensans_semibold"
+                                    android:text="@string/action_contact"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/txt_white"
+                                    android:textSize="@dimen/txt_small" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDataPelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_customer_data" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_mid"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:paddingStart="@dimen/margin_small"
+                    android:paddingEnd="@dimen/margin_small"
+                    android:text="@string/customer_lbl_keperluan_dokumen"
+                    android:textAllCaps="true"
+                    android:textColor="@color/txt_hint_login"
+                    android:textSize="@dimen/txt_medium" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    app:cardCornerRadius="@dimen/margin_medium"
+                    app:cardElevation="1dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAttachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_prospek_attachment" />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_mid"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:paddingStart="@dimen/margin_small"
+                        android:paddingEnd="@dimen/margin_small"
+                        android:text="@string/customer_lbl_daftar_follow_up"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txt_hint_login"
+                        android:textSize="@dimen/txt_medium" />
+
+                    <TextView
+                        android:id="@+id/tvSeeFollowUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:padding="@dimen/margin_small"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:paddingStart="@dimen/margin_small"
+                        android:paddingEnd="@dimen/margin_small"
+                        android:text="Lihat Semua"
+                        android:textColor="@color/red_crimson"
+                        android:textSize="@dimen/txt_medium" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    app:cardCornerRadius="@dimen/margin_medium"
+                    app:cardElevation="1dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/margin_small"
+                       android:orientation="vertical">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="@dimen/margin_small"
+                           android:orientation="horizontal"
+                           android:background="@drawable/bg_fill_round_capsule_white_dark">
+
+                           <TextView
+                               android:id="@+id/title_follow_up"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_gravity="center_vertical"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="@dimen/margin_mid"
+                               android:layout_marginBottom="@dimen/margin_mid"
+                               android:layout_marginStart="@dimen/margin_big"
+                               android:text="Follow Up 3 . Bertemu"
+                               android:fontFamily="@font/opensans_regular"
+                               android:textColor="@color/txt_black"
+                               android:textSize="@dimen/txt_default"/>
+
+                           <ImageView
+                               android:layout_width="@dimen/icon_medium"
+                               android:layout_height="@dimen/icon_medium"
+                               android:src="@drawable/ic_plus_en"
+                               android:padding="@dimen/margin_extra_small"
+                               android:layout_marginEnd="@dimen/margin_medium"
+                               android:layout_marginTop="@dimen/margin_mid"
+                               android:layout_marginBottom="@dimen/margin_mid"
+                               android:background="@drawable/bg_outline_circle_gray"/>
+
+                       </LinearLayout>
+
+                       <include layout="@layout/item_follow_up"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="@dimen/margin_medium"/>
+
+
+                   </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@drawable/bg_outline_round_capsule">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/margin_medium"
+                android:text="@string/action_ganti_status"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_default"
+                app:fontFamily="@font/opensans_regular" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/margin_medium"
+                android:text="@string/action_ganti_status"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_default"
+                app:fontFamily="@font/opensans_bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_negative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_weight="1"
+                android:background="@drawable/bg_fill_btn_black_round"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center"
+                android:text="@string/action_no_deal"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_default" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_positive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_weight="1"
+                android:background="@drawable/bg_fill_round_btn_green"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center"
+                android:text="@string/action_deal"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_white"
+                android:textSize="@dimen/txt_default" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

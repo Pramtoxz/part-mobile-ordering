@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_fill_bottom_fragment"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    app:cardCornerRadius="@dimen/margin_20"
+                    app:cardElevation="@dimen/margin_3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPartNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="06381KW6P01"
+                                android:textColor="@color/txt_black_category"
+                                android:textSize="@dimen/font_14"
+                                app:fontFamily="@font/opensans_semibold" />
+
+                            <TextView
+                                android:id="@+id/tvPartDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_3"
+                                android:text="CON ROD • KIT"
+                                android:textColor="@color/txt_gray_category"
+                                android:textSize="@dimen/font_12"
+                                app:fontFamily="@font/opensans" />
+
+                            <TextView
+                                android:id="@+id/tvItemGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_4"
+                                android:layout_marginRight="@dimen/margin_20"
+                                android:background="@drawable/bg_favorite_type"
+                                android:paddingLeft="@dimen/margin_9"
+                                android:paddingTop="@dimen/margin_1"
+                                android:paddingRight="@dimen/margin_9"
+                                android:paddingBottom="@dimen/margin_3"
+                                android:text="TIRE"
+                                android:textColor="@color/txt_gray_category"
+                                android:textSize="@dimen/font_10"
+                                app:fontFamily="@font/opensans_regular" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_12"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/margin_8"
+                                    android:layout_weight="1"
+                                    android:text="Total Order Quantity"
+                                    android:textColor="@color/txt_gray"
+                                    android:textSize="@dimen/font_10"
+                                    app:fontFamily="@font/opensans_regular" />
+
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/lbl_total_amount"
+                                    android:textColor="@color/txt_gray"
+                                    android:textSize="@dimen/font_10"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_3"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvTotalQty"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/margin_8"
+                                    android:layout_weight="1"
+                                    android:text="1 pcs"
+                                    android:textColor="@color/txt_gray"
+                                    android:textSize="@dimen/font_14"
+                                    app:fontFamily="@font/opensans_bold" />
+
+
+                                <TextView
+                                    android:id="@+id/tvTotalAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Rp. 55.000"
+                                    android:textColor="@color/red_nominal"
+                                    android:textSize="@dimen/font_14"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_20"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_8"
+                                        android:layout_marginRight="@dimen/margin_20"
+                                        android:text="@string/lbl_status_pengiriman"
+                                        android:textColor="@color/txt_gray"
+                                        android:textSize="@dimen/font_10"
+                                        app:fontFamily="@font/opensans_regular" />
+
+                                    <TextView
+                                        android:id="@+id/tvStatusPengiriman"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_4"
+                                        android:layout_marginRight="@dimen/margin_20"
+                                        android:text="382 / 386 Status"
+                                        android:textColor="@color/green_lapalma"
+                                        android:textSize="@dimen/font_14"
+                                        app:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_invoice_and_pengiriman"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:textColor="@color/grey_silver"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <include layout="@layout/content_loading_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_height="wrap_content"
+                    tool:listitem="@layout/item_tracking_order_invoice_pengiriman"/>
+
+                    <include layout="@layout/content_view_state"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DE2035</color>
+    <color name="colorPrimaryDark">#DE2035</color>
+    <color name="colorAccent">#DE2035</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_dark">#F4F4F4</color>
+
+    <color name="txt_white">#ffffff</color>
+    <color name="txt_white_50">#80FFFFFF</color>
+    <color name="txt_black">#000000</color>
+    <color name="txt_black_category">#142238</color>
+    <color name="txt_black_calendar">#12183D</color>
+    <color name="txt_black_tracking">#3C3838</color>
+    <color name="txt_hint_login">#7C7C7C</color>
+    <color name="txt_gray">#7C7C7C</color>
+    <color name="txt_gray_">#8B8B8B</color>
+    <color name="txt_gray_ongoing">#959595</color>
+    <color name="txt_gray_category">#555555</color>
+    <color name="txt_info">@color/blue_sea</color>
+
+    <color name="black_opacity">#4D000000</color>
+
+    <color name="bg_cell_calendar">#000000</color>
+    <color name="divider">#EDEDED</color>
+
+    <color name="red_crimson">#ED1B2F</color>
+    <color name="red_search">#FFE21823</color>
+    <color name="red_nominal">#E21823</color>
+    <color name="red_amount_order">#DB2521</color>
+    <color name="black_mirage">#18212E</color>
+    <color name="black50">#80000000</color>
+    <color name="gray_alto">#DADADA</color>
+    <color name="green">#28C784</color>
+    <color name="green_dark">#19A369</color>
+    <color name="blue_sea">#1DA0DA</color>
+    <color name="yellow">#FECD2F</color>
+
+    <color name="grey_sk_bg">#E1E1E1</color>
+    <color name="grey_sk_hightlight">#faefef</color>
+
+    <color name="gray80">#CCCCCC</color>
+    <color name="grey_btn">#FF7C7C7C</color>
+
+    <color name="green_lapalma">#159B27</color>
+
+    <color name="grey_hint">#9EAEC2</color>
+    <color name="gray_hint_search">#BCFFFFFF</color>
+    <color name="grey_bg">#FAFAFA</color>
+    <color name="grey_mercury">#E3E3E3</color>
+    <color name="grey_divider_stroke">#FFE3E3E3</color>
+    <color name="grey_silver">#C9C9C9</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="grey_divider">#EFEFF4</color>
+    <color name="grey_divider_1">#EBEBEB</color>
+
+    <color name="mdtp_accent_color">@color/colorPrimary</color>
+    <color name="mdtp_accent_color_dark">@color/colorPrimaryDark</color>
+
+
+</resources>

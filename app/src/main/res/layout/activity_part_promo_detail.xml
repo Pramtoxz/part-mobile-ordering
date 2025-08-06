@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_fill_bottom_fragment"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:foreground="?selectableItemBackground"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_width="match_parent"
+                    app:cardElevation="@dimen/margin_3"
+                    app:cardCornerRadius="@dimen/margin_20"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvNamePart"
+                            android:text="CAM1 • HONDA CABLE FANTASY"
+                            android:layout_marginTop="@dimen/margin_18"
+                            android:textColor="@color/txt_black_category"
+                            app:fontFamily="@font/opensans_semibold"
+                            android:textSize="@dimen/font_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvPartNumber"
+                            android:text="06381KW6P01 • CABLE 1"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:textColor="@color/txt_gray_category"
+                            app:fontFamily="@font/opensans"
+                            android:textSize="@dimen/font_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvHet"
+                            android:text="Rp. 55.000"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:textColor="@color/red_nominal"
+                            app:fontFamily="@font/opensans_bold"
+                            android:textSize="@dimen/font_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvDiscount"
+                                android:text="10%"
+                                android:textColor="@color/txt_black_category"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tvBeginDate"
+                                android:text="Juni 30, 2019"
+                                android:textColor="@color/txt_black_category"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tvEndDate"
+                                android:text="Juli 31, 2019"
+                                android:textColor="@color/txt_black_category"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="@string/lbl_discount"
+                                android:textColor="@color/txt_gray"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="@string/lbl_campaign_promo_begin_effdate"
+                                android:textColor="@color/txt_gray"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="@string/lbl_campaign_promo_end_effdate"
+                                android:textColor="@color/txt_gray"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:textSize="@dimen/font_12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvNotePart"
+                            android:text="*Khusus Pelanggan Guru"
+                            android:layout_marginTop="@dimen/margin_12"
+                            android:textColor="@color/txt_gray"
+                            app:fontFamily="@font/opensans_italic"
+                            android:textSize="@dimen/font_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:id="@+id/btnDetailPromo"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_18"
+                            android:layout_marginTop="@dimen/margin_18"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_favorite_type"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="@dimen/margin_4"
+                                android:layout_marginTop="@dimen/margin_3"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:fontFamily="@font/opensans_semibold"
+                                android:text="@string/lbl_detail_promo"
+                                android:textColor="@color/txt_gray_category"
+                                android:textSize="@dimen/font_12" />
+
+                            <ImageView
+                                app:tint="@color/txt_gray_category"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:src="@drawable/ic_arrow_chevron_right"
+                                android:layout_width="@dimen/margin_5"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_title_part_details"
+                    android:textColor="@color/txt_black_category"
+                    android:textSize="@dimen/font_14"
+                    app:fontFamily="@font/opensans_semibold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_21"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_kelipatan_dus"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvDus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_21"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_type_motor"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTypeMotor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvHotlineFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_hotline_max_qty"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvHotlineMaxQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_flag_numbering"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvFlagNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_kit_flag"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvKitFlag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_22"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_kit_hgp_acc_tl"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <TextView
+                        android:id="@+id/tvHgpTl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/lbl_hotline_flag"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_14"
+                        app:fontFamily="@font/opensans_semibold" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

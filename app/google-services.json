@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "712989987546",
+    "firebase_url": "https://ma-mobile-part-ordering.firebaseio.com",
+    "project_id": "ma-mobile-part-ordering",
+    "storage_bucket": "ma-mobile-part-ordering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712989987546:android:58a5b6d2d944b86eeecbe3",
+        "android_client_info": {
+          "package_name": "com.ma.pmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712989987546-8ggjc59bj5vt2r9p5mn9n3fk9his4ka3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaIOefG4PLJZWmwqrnCzmQlAWw8SfytlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712989987546-8ggjc59bj5vt2r9p5mn9n3fk9his4ka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/margin_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/vBottom"
+            android:orientation="vertical">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_fill_bottom_fragment_white"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:text="@string/lbl_lengkapi_form_untuk_cek_realisasi_visit"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_italic" />
+
+
+                    <LinearLayout
+                        android:id="@+id/formKoordinatirSalesman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_koordinator_salesman"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etKoordinatorSalesman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:layout_marginTop="8dp"
+                            app:fontFamily="@font/opensans_regular"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawableRight="@drawable/ic_profile"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_pilih_koordinator_salesman"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="22dp"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/grey_hint"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_salesman"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etSalesman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableRight="@drawable/ic_profile"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_pilih_salesman"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:focusable="false"
+                            android:paddingLeft="@dimen/margin_16"
+                            android:paddingRight="@dimen/margin_22"
+                            app:fontFamily="@font/opensans_regular"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/grey_hint"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_dealer"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etPilihDealer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawableRight="@drawable/ic_search_brown"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_pilih_dealer"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="22dp"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/grey_hint"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_tanggal_awal"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etTanggalAwal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawableRight="@drawable/ic_calendar_form"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_pilih_tanggal_awal"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="22dp"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/grey_hint"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_tanggal_akhir"
+                            android:textColor="@color/grey_hint"
+                            android:textSize="@dimen/txt_small"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <EditText
+                            android:id="@+id/etTanggalAkhir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_selector_form_visit"
+                            android:drawableRight="@drawable/ic_calendar_form"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_pilih_tanggal_akhir"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/margin_16"
+                            android:paddingRight="@dimen/margin_22"
+                            android:paddingTop="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:textColor="@color/txt_black"
+                            android:textColorHint="@color/grey_hint"
+                            android:textSize="@dimen/txt_default" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include layout="@layout/content_view_state" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnViewPlanActual"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:background="@drawable/bg_btn_green_search_parts"
+                android:text="@string/btn_view_plan_vs_actual"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15"
+                app:fontFamily="@font/opensans_semibold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

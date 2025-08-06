@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_fill_bottom_fragment"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_6"
+                app:backgroundColor="@color/white"
+                app:cornerRadius="@dimen/margin_20"
+                app:shadowMargin="@dimen/margin_4"
+                app:shadowRadius="@dimen/margin_15">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_4"
+                        android:layout_marginTop="@dimen/margin_17"
+                        android:text="@string/lbl_summary_efektivitas_visit"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_italic" />
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:orientation="horizontal">
+
+
+                        <com.loopeer.shadow.ShadowView
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:backgroundColor="@color/txt_black"
+                            app:cornerRadius="@dimen/margin_14"
+                            app:shadowMargin="@dimen/margin_4"
+                            app:shadowRadius="@dimen/margin_20">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_17"
+                                android:layout_height="@dimen/margin_17"
+                                android:src="@drawable/ic_visit"
+                                app:layout_gravity="center" />
+
+                        </com.loopeer.shadow.ShadowView>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_18"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                android:text="234 • "
+                                <TextView
+                                    android:id="@+id/tvActual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/txt_black_category"
+                                    android:textSize="@dimen/font_16"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lbl_actual"
+                                    android:textColor="@color/txt_gray_category"
+                                    android:textSize="@dimen/font_8"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                android:text="300 • "
+                                <TextView
+                                    android:id="@+id/tvTarget"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/txt_black_category"
+                                    android:textSize="@dimen/font_16"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lbl_target"
+                                    android:textColor="@color/txt_gray_category"
+                                    android:textSize="@dimen/font_8"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                android:text="78% • "
+                                <TextView
+                                    android:id="@+id/tvRealisasi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/txt_black_category"
+                                    android:textSize="@dimen/font_16"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lbl_realisasi"
+                                    android:textColor="@color/txt_gray_category"
+                                    android:textSize="@dimen/font_8"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                android:text="%"
+                                <TextView
+                                    android:id="@+id/tvEfektivitas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/txt_black_category"
+                                    android:textSize="@dimen/font_16"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lbl_efektivitas"
+                                    android:textColor="@color/txt_gray_category"
+                                    android:textSize="@dimen/font_8"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_4"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAmountTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_18"
+                            app:fontFamily="@font/opensans_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_total_amount"
+                            android:textColor="@color/txt_gray_category"
+                            android:textSize="@dimen/font_10"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.loopeer.shadow.ShadowView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvHeaderDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:text="@string/lbl_list_efektivitas_visit_bold"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/font_12"
+            app:fontFamily="@font/opensans_bold" />
+
+
+    </LinearLayout>
+
+
+    <!--   <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:overScrollMode="never">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginTop="@dimen/margin_20"-->
+    <!--            android:orientation="vertical">-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/content_loading_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_13"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEfektivitas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                tool:itemCount="10"
+                tool:listitem="@layout/item_realisasi_visit_plan_actual" />
+
+
+            <include layout="@layout/content_view_state"/>
+
+            <ahm.parts.ordering.ui.widget.progressbar.MaterialProgressBar
+                android:id="@+id/pbLoadingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:indeterminate="true"
+                app:backgroundColour="@color/white"
+                app:duration="2000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:progressColour="@color/colorPrimaryDark" />
+
+        </FrameLayout>
+    </LinearLayout>
+    <!--        </LinearLayout>-->
+
+    <!--   </androidx.core.widget.NestedScrollView>-->
+
+
+</LinearLayout>

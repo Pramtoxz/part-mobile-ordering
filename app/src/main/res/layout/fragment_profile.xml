@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.profile.ProfileFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_honda" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30" />
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:contentScrim="@android:color/transparent"
+                    app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="parallax">
+
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_gravity="center"
+                            android:id="@+id/ivUser"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            android:src="@drawable/placeholder_image_circle"
+                            android:transitionName="imagePreview"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold"
+                            android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tvJob"
+                                android:layout_marginBottom="@dimen/margin_25"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans"
+                            android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_fill_bottom_fragment"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:paddingBottom="@dimen/margin_14"
+                    android:paddingTop="36dp">
+
+                    <TextView
+                        android:text="ID"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvCodeUser"
+                        android:layout_marginTop="@dimen/margin_4"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:text="@string/lbl_phone_number_profile"
+                        android:layout_marginTop="@dimen/margin_20"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumber"
+                        android:layout_marginTop="@dimen/margin_4"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="@string/lbl_email"
+                        android:layout_marginTop="@dimen/margin_20"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_marginTop="@dimen/margin_4"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <LinearLayout
+                        android:paddingBottom="@dimen/margin_4"
+                        android:paddingTop="@dimen/margin_4"
+                        android:layout_marginTop="@dimen/margin_35"
+                        android:id="@+id/vChangePassword"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="@dimen/margin_4"
+                            app:fontFamily="@font/opensans_semibold"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_15"
+                            android:text="@string/lbl_ganti_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider"
+                            android:layout_marginTop="@dimen/margin_7"
+                            android:background="@color/grey_divider_1" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_48"
+                        android:layout_marginTop="@dimen/margin_40"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/bg_red_category_enable_home"
+                        android:paddingLeft="@dimen/margin_30"
+                        android:paddingRight="@dimen/margin_30"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/font_16"
+                        android:text="@string/btn_logout"
+                        android:textColor="@color/txt_white"
+                        app:fontFamily="@font/opensans_semibold"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

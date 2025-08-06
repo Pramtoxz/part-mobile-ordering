@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lBottom"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:background="@color/grey_bg"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/bg_fill_bottom_fragment"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/rootContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="@string/lbl_part_list"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_2"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_part_summary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="@string/lbl_pengiriman"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin_2"
+                        android:textColorHint="@color/grey_hint">
+
+                        <EditText
+                            android:id="@+id/etMonthDeliver"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:drawableRight="@drawable/ic_calendar_form"
+                            android:focusable="false"
+                            android:hint="@string/hint_month_deliver"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:paddingTop="@dimen/margin_10"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_7"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:background="@color/grey_divider_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_36"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="@string/lbl_detail_pembelian_bold"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItemPembelian"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Pembelian (2 items)"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvTotalPembelian"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Rp 27.110.000"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lbl_diskon"
+                            android:textColor="@color/txt_gray"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvDiscount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Rp 0"
+                            android:textColor="@color/red_amount_order"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include layout="@layout/content_view_state" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSubmitOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_22"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/bg_btn_green_search_parts"
+            app:fontFamily="@font/opensans_semibold"
+            android:text="@string/btn_submit_order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

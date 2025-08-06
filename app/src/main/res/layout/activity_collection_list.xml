@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_fill_bottom_fragment"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_6"
+                app:backgroundColor="@color/white"
+                app:cornerRadius="@dimen/margin_20"
+                app:shadowMargin="@dimen/margin_4"
+                app:shadowRadius="@dimen/margin_15">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_4"
+                        android:layout_marginTop="@dimen/margin_17"
+                        android:text="Collection Dealer"
+                        android:textColor="@color/txt_black_category"
+                        android:textSize="@dimen/font_12"
+                        app:fontFamily="@font/opensans_italic" />
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:orientation="horizontal">
+
+
+                        <com.loopeer.shadow.ShadowView
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:backgroundColor="@color/txt_black"
+                            app:cornerRadius="@dimen/margin_14"
+                            app:shadowMargin="@dimen/margin_4"
+                            app:shadowRadius="@dimen/margin_20">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_17"
+                                android:layout_height="@dimen/margin_17"
+                                android:src="@drawable/ic_salesman_visit"
+                                app:layout_gravity="center" />
+
+                        </com.loopeer.shadow.ShadowView>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_18"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvPiutang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/txt_black_category"
+                                    android:text="Rp. ***.***.***"
+                                    android:textSize="@dimen/font_16"
+                                    app:fontFamily="@font/opensans_bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Piutang"
+                                    android:textColor="@color/txt_gray_category"
+                                    android:textSize="@dimen/font_8"
+                                    app:fontFamily="@font/opensans_regular" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_4"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAmountTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_18"
+                            app:fontFamily="@font/opensans_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Pembayaran"
+                            android:textColor="@color/txt_gray_category"
+                            android:textSize="@dimen/font_10"
+                            app:fontFamily="@font/opensans_regular" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.loopeer.shadow.ShadowView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvHeaderDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:text="List Collection"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/font_12"
+            app:fontFamily="@font/opensans_bold" />
+
+
+    </LinearLayout>
+        <include layout="@layout/content_view_state" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/content_loading_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_13"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCollectionList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/margin_15"
+                tools:itemCount="7"
+                tools:listitem="@layout/item_collection_list" />
+
+            <include layout="@layout/content_view_state"/>
+
+            <ahm.parts.ordering.ui.widget.progressbar.MaterialProgressBar
+                android:id="@+id/pbLoadingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:indeterminate="true"
+                app:backgroundColour="@color/white"
+                app:duration="2000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:progressColour="@color/colorPrimaryDark" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="760dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="590dp"
+                android:layout_marginRight="20dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="@dimen/margin_20"
+                app:cardElevation="@dimen/margin_2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20">
+
+                    <Button
+                        android:id="@+id/btnSubmitCol"
+                        android:layout_width="300dp"
+                        android:layout_height="@dimen/margin_60"
+                        android:layout_marginLeft="420dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_btn_green_search_parts"
+                        android:drawableEnd="@drawable/ic_arrow_chevron_right"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Lanjut"
+                        app:fontFamily="@font/opensans_semibold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        app:cardBackgroundColor="@color/gray_alto"
+                        app:cardCornerRadius="@dimen/margin_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="11dp"
+                            android:fontFamily="@font/robotomedium"
+                            android:text="Item"
+                            android:textColor="@color/txt_black"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="11dp"
+                            android:text="0"
+                            android:textColor="@color/txt_black"
+                            android:textSize="15dp" />
+
+                        <View
+                            android:id="@+id/viewSeparator"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/underline_1_dp"
+                            android:layout_marginTop="37dp"
+                            android:background="#8D8B8B" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="45dp"
+                            android:text="Total"
+                            android:textColor="@color/txt_black"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalBayarSelect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="45dp"
+                            android:text="0"
+                            android:textColor="@color/txt_black"
+                            android:textSize="15dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

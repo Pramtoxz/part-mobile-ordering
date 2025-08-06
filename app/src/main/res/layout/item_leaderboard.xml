@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/bg_fill_round_container_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_mid">
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_small"
+            android:fontFamily="@font/opensans_semibold"
+            android:text="10"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_medium" />
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:src="@drawable/ic_peringkat_up_other" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_contact_phone" />
+
+            <ImageView
+                android:id="@+id/ivBadge"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/bg_fill_badge_leaderboard" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Prisia Jodi"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_small" />
+
+            <TextView
+                android:id="@+id/tvInfoPeringkat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Naik 2 peringkat"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_smallest" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                android:fontFamily="@font/opensans_bold"
+                android:text="200"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/leaderboard_lbl_point"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/txt_smallest" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

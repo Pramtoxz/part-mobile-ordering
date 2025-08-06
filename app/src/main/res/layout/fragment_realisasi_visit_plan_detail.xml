@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_fill_bottom_fragment"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+
+                <com.loopeer.shadow.ShadowView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    app:cornerRadius="@dimen/margin_20"
+                    app:shadowMargin="@dimen/margin_4"
+                    app:shadowRadius="@dimen/margin_15">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSalesName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Empty"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_bold" />
+
+                        <TextView
+                            android:id="@+id/tvSalesKode"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:layout_height="wrap_content"
+                            android:text="Empty"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:layout_height="wrap_content"
+                            android:text="Empty"
+                            android:textColor="@color/txt_gray_ongoing"
+                            android:textSize="@dimen/font_12"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <TextView
+                            android:id="@+id/tvReport"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:layout_height="wrap_content"
+                            android:text="Empty"
+                            android:textColor="@color/txt_black_category"
+                            android:textSize="@dimen/font_14"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                    </LinearLayout>
+
+                </com.loopeer.shadow.ShadowView>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_visit_details"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="@dimen/font_12"
+                    app:fontFamily="@font/opensans_bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVisitDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tool:listitem="@layout/item_visit_details"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    tool:itemCount="1"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

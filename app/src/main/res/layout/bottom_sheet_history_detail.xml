@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:behavior_hideable="false"
+    android:id="@+id/bottomSheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight="@dimen/_90sdp"
+    android:layout_height="wrap_content">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadiusTL="@dimen/margin_25"
+        app:cornerRadiusTR="@dimen/margin_25"
+        app:shadowMarginTop="@dimen/margin_4"
+        app:shadowRadius="@dimen/margin_20">
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_bottom_dialog" />
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_3"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:background="@drawable/bg_fill_round_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvLabelTotalPembelian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20"
+                                android:textColor="@color/txt_gray"
+                                android:textSize="@dimen/font_10"
+                                app:fontFamily="@font/opensans_bold" />
+
+                            <TextView
+                                android:id="@+id/tvTotalPembelian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:textColor="@color/txt_black_category"
+                                android:textSize="@dimen/font_16"
+                                app:fontFamily="@font/opensans_bold" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/margin_15"
+                            android:background="@drawable/bg_btn_green_search_parts"
+                            android:text="@string/btn_selanjutnya"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_15"
+                            app:fontFamily="@font/opensans_semibold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="DETAIL PEMBELIAN"
+                        app:fontFamily="@font/opensans_semibold"
+                        android:textSize="@dimen/font_13"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_15"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="@string/lbl_sub_total"
+                                app:fontFamily="@font/opensans_regular"
+                                android:textSize="@dimen/font_14"
+                                android:layout_marginLeft="@dimen/margin_20"
+                                android:layout_marginRight="@dimen/margin_15"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tvSubTotalPembelian"
+                                android:gravity="right"
+                                app:fontFamily="@font/opensans_bold"
+                                android:textSize="@dimen/font_14"
+                                android:layout_marginRight="@dimen/margin_20"
+                                android:layout_width="0dp"
+                                android:textColor="@color/txt_black_category"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_14"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="@string/lbl_discount"
+                                app:fontFamily="@font/opensans_regular"
+                                android:textSize="@dimen/font_14"
+                                android:layout_marginLeft="@dimen/margin_20"
+                                android:layout_marginRight="@dimen/margin_15"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:layout_marginRight="@dimen/margin_20"
+                                android:background="@drawable/bg_outline_discount_cart"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_marginTop="@dimen/margin_8"
+                                    android:layout_marginBottom="@dimen/margin_8"
+                                    android:layout_marginLeft="@dimen/margin_13"
+                                    android:layout_marginRight="@dimen/margin_13"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:src="@drawable/ic_edit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"/>
+
+                                    <TextView
+                                        android:id="@+id/tvDiscount"
+                                        android:text="Rp 0"
+                                        app:fontFamily="@font/opensans_semibold"
+                                        android:textSize="@dimen/font_12"
+                                        android:textColor="@color/txt_black_category"
+                                        android:layout_marginLeft="@dimen/margin_40"
+                                        android:layout_marginRight="@dimen/margin_15"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:gravity="right"
+                            android:layout_marginBottom="@dimen/margin_20"
+                            android:text="*Discount dalam bentuk \nnominal harga"
+                            app:fontFamily="@font/opensans_italic"
+                            android:textSize="@dimen/font_10"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/red_amount_order"
+                            android:layout_gravity="right"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    </com.loopeer.shadow.ShadowView>
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.login.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_honda" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewLoginForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_lbl_heading"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/txt_huge"
+            app:fontFamily="@font/opensans_bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/login_lbl_sub_heading"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/txt_default" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewLoginForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fill_round_top_white"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/viewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/login_lbl_iduser"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_selector_form_login"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:hint="@string/login_lbl_hint_iduser"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:minWidth="320dp"
+                android:minHeight="48dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="12dp"
+                android:paddingRight="22dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/txt_black"
+                android:textColorHint="@color/txt_hint_login"
+                android:textSize="@dimen/txt_default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewUsername">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/login_lbl_password"
+                android:textColor="@color/txt_hint_login"
+                android:textSize="@dimen/txt_small" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_selector_form_login"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_type_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:minWidth="320dp"
+                    android:minHeight="48dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="22dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="@color/txt_black"
+                    android:textColorHint="@color/txt_hint_login"
+                    android:textSize="@dimen/txt_default" />
+
+                <TextView
+                    android:id="@+id/btnShowPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="6dp"
+                    android:text="View"
+                    android:textColor="@color/txt_hint_login"
+                    android:textSize="@dimen/txt_small" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:padding="@dimen/margin_4"
+            android:text="@string/lbl_forgot_password"
+            android:layout_marginBottom="96dp"
+            android:foreground="?selectableItemBackground"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_default"
+            app:fontFamily="@font/opensans_semibold"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin"
+            app:layout_constraintEnd_toEndOf="@id/viewPassword"
+            app:layout_constraintTop_toBottomOf="@id/viewPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_fill_round_btn_red"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:minWidth="320dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textSize="@dimen/font_16"
+            android:text="@string/login_lbl_btn_submit"
+            android:textColor="@color/txt_white"
+            app:fontFamily="@font/opensans_semibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
