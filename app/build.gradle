@@ -1,175 +1,138 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'kotlin-parcelize' // Pengganti fitur @Parcelize
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
 
 android {
-    namespace 'com.ma.pmo'
     compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+
+    namespace 'ahm.parts.ordering'
+
     defaultConfig {
         applicationId "com.ma.pmo"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 1
-        versionName "0.0.35"
+        versionCode 24
+        versionName "1.2.4"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
         buildConfigField "String", "BASE_URL", "\"https://sc-test.menara-agung.com/pmo/api/\""
-//        buildConfigField "String", "BASE_URL", "\"http://192.168.40.207/dms-web-services/public/pmo/api/\""
-//        buildConfigField "String", "BASE_URL", "\"http://neptune.crocodic.net/ahm/part_ordering/public/api/\""
-        /*buildConfigField "String", "BASE_URL", "\"https://anpersys.com/service_management/api/\""*/
-        /*buildConfigField "String", "BASE_URL", "\"https://anpersys.com/part_ordering/api/\""*/
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [usesCleartextTraffic: false, crashlyticsEnabled: true]
-        }
-        debug {
-            debuggable true
-            minifyEnabled false
-            manifestPlaceholders = [usesCleartextTraffic: true, crashlyticsEnabled: false]
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
     buildFeatures {
         viewBinding true
         buildConfig true
+        dataBinding true
     }
-    dataBinding {
-        enabled = true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation project(path: ':eavlibrary')
 
-    // Room components
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
-    implementation "androidx.room:room-rxjava2:$roomVersion"
+    // KOTLIN
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    // ANDROIDX
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
-    kapt "androidx.room:room-compiler:$roomVersion"
-    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 
-    // Lifecycle components
-    implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
-    androidTestImplementation "androidx.arch.core:core-testing:$androidxArchVersion"
+    // LIVEDATA & VIEWMODEL
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
 
-    // ViewModel Kotlin support
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
+    // ROOM
+    implementation "androidx.room:room-runtime:2.5.2"
+    kapt "androidx.room:room-compiler:2.5.2"
+    implementation "androidx.room:room-ktx:2.5.2"
 
-    // Coroutines
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+    // DAGGER
+    implementation 'com.google.dagger:dagger:2.44'
+    kapt 'com.google.dagger:dagger-compiler:2.44'
+    implementation 'com.google.dagger:dagger-android:2.44'
+    implementation 'com.google.dagger:dagger-android-support:2.44'
+    kapt 'com.google.dagger:dagger-android-processor:2.44'
 
-    // Dagger
-    implementation "com.google.dagger:dagger:$dagger2Version"
-    kapt "com.google.dagger:dagger-compiler:$dagger2Version"
-    implementation "com.google.dagger:dagger-android:$dagger2Version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger2Version"
-    implementation "com.google.dagger:dagger-android-support:$dagger2Version"
+    // NETWORK
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.google.code.gson:gson:2.9.0'
 
-    // Retrofit
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
-
-    implementation 'com.google.code.gson:gson:2.8.5'
-
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    // REACTIVE
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
 
-    //Firebase
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-messaging:20.0.0'
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
-    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+    // FIREBASE
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.4.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
 
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    // GOOGLE MAPS
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
-    //GMS
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    implementation 'com.google.android.gms:play-services-places:17.0.0'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    // UI LIBRARIES (YANG AKTIF & DIBUTUHKAN)
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6' // Versi dinaikkan sedikit
+    implementation 'com.airbnb.android:lottie:3.4.0' // Versi disesuaikan
+    implementation 'com.tbuonomo:dotsindicator:4.3' // INI PENGGANTI YANG LAMA
 
-    //TextView
-   // implementation 'com.xeoh.android:text-highlighter:1.0.3'
-   // implementation 'com.binaryfork:spanny:1.0.4'
-
-    //Anko
-   // implementation "org.jetbrains.anko:anko:0.10.5"
-
-    //ImageScale
+    // LIBRARY USANG (DINONAKTIFKAN SEMENTARA)
+    //implementation 'com.xeoh.android:text-highlighter:1.0.3'
+    //implementation 'com.binaryfork:spanny:1.0.4'
+    //implementation "org.jetbrains.anko:anko:0.10.5"
     //implementation 'me.shaohui.advancedluban:library:1.3.5'
-
-    //PhotoView
-    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
-
-    //EventBus
-    implementation 'org.greenrobot:eventbus:3.1.1'
-
-    //Calendar
     //implementation 'com.whiteelephant:monthandyearpicker:1.3.0'
     //implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
-    //implementation 'com.github.shuwnyuantee:Material-Calendar-View:1.3'
-
-    //Glide
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
-    kapt "com.github.bumptech.glide:compiler:$glideVersion"
-
-    //BottomNavigation
     //implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
     //implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
-
-    //Permission
     //implementation 'gun0912.ted:tedpermission-rx2:2.2.2'
     //implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.1'
-
-    //Skeleton
     //implementation 'com.github.rasoulmiri:Skeleton:v1.0.9'
-
-    //AvLoader
-   // implementation 'com.wang.avi:library:2.1.3'
-
-    //RxDownload
+    //implementation 'com.wang.avi:library:2.1.3'
     //implementation 'com.github.esafirm:rxdownloader:2.0.0'
+    //implementation "com.utsman.recycling:recycling:1.3.8"
+    //implementation 'com.github.florent37:shapeofview:1.3.2'
+    //implementation "com.loopeer.lib:shadow:$rootProject.shadowVersion"
+    //implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    //implementation 'com.github.TutorialsAndroid:FilePicker:v6.0.19'
+    //implementation 'com.github.jkwiecien:EasyImage:1.3.1'
+    //implementation 'com.github.shuwnyuantee:Material-Calendar-View:1.3'
+    //implementation 'com.wajahatkarim3:easyvalidation-core:1.0.0'
 
-    //Other
-    implementation "com.utsman.recycling:recycling:1.3.8"
-   implementation 'com.makeramen:roundedimageview:2.3.0'
-   implementation 'com.intuit.sdp:sdp-android:1.0.4'
-   implementation 'com.airbnb.android:lottie:3.0.7'
-//  implementation 'com.github.florent37:shapeofview:1.3.2'
-    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
-    // Shadow
-//    implementation "com.loopeer.lib:shadow:$rootProject.shadowVersion"
-
-
-    //Picker
-//    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
-//    implementation 'com.github.TutorialsAndroid:FilePicker:v6.0.19'
-//    //implementation 'com.github.jkwiecien:EasyImage:3.0.3'
-//    implementation 'com.github.jkwiecien:EasyImage:1.3.1'
-
-    //implemetation project
-    implementation project(':eavlibrary')
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // TESTING
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
